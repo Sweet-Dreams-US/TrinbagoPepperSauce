@@ -10,12 +10,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Caveat:wght@500;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles/globals.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0707'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A0707' stroke='%23E51D1F' stroke-width='6'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Bungee,Impact' font-size='38' fill='%23E51D1F'%3ET%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="assets/img/Logo.png" />
+<style>.nav-brand{gap:0.6rem}.nav-logo{width:36px;height:36px;object-fit:contain;border-radius:50%}</style>
 </head>
 <body>
 
 <nav class="nav" id="nav">
-  <a href="index.html" class="nav-brand">Trinbago</a>
+  <a href="index.html" class="nav-brand">
+    <img src="assets/img/Logo.png" alt="Trinbago Pepper Sauce logo" class="nav-logo" />
+    Trinbago
+  </a>
   <div class="nav-links" id="navLinks">
     <a href="index.html" class="nav-link">Home</a>
     <a href="about.html" class="nav-link">De Story</a>
@@ -30,17 +34,29 @@
 </nav>
 
 <!-- Page Header -->
-<section class="page-header">
+<section class="page-header heat-scale-header">
   <div class="wrap">
-    <span class="eyebrow" data-reveal>De Heat Scale</span>
-    <h1 class="display fade-up" style="font-size: clamp(3rem, 12vw, 11rem); margin-top: 1.5rem;">
-      Pick<br />yuh <span class="text-pepper">fire.</span>
-    </h1>
-    <p class="lead mt-6" data-reveal data-delay="2">
-      Three bottles. Three heat levels. Same Trini soul. Whether yuh just want a little tickle on de eggs or a full-blown sweat-through-de-shirt experience — we got de drop for you.
-    </p>
+    <div class="grid-12" style="align-items:center; gap: var(--gutter);">
+      <div style="grid-column: 1 / span 7;">
+        <div class="stamp" data-reveal>★ De Heat Scale ★</div>
+        <h1 class="display fade-up" style="font-size: clamp(3rem, 12vw, 11rem); margin-top: 1.5rem; line-height: 0.92;">
+          Pick<br />yuh <span class="text-pepper" style="font-family: var(--font-script); text-shadow: 6px 6px 0 var(--bg);">fire.</span>
+        </h1>
+        <p class="lead mt-6" data-reveal data-delay="2">
+          Three bottles. Three heat levels. Same Trini soul. Whether yuh just want a little tickle on de eggs or a full-blown sweat-through-de-shirt experience — we got de drop for you.
+        </p>
+      </div>
+      <div style="grid-column: 9 / -1;" data-reveal data-delay="3">
+        <div class="bottle-mount">
+          <img src="assets/img/saucebottle.png" alt="Trinbago bottle" />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- Caution tape -->
+<div class="caution-tape" aria-hidden="true"></div>
 
 <!-- Tabs -->
 <section class="section section-tight" data-tabs>
@@ -470,6 +486,10 @@
     .timeline-row { grid-template-columns: 70px 16px 1fr; gap: var(--s-3); }
   }
 </style>
+
+<a href="pricing.html" class="floating-brand" aria-label="Buy a bottle">
+  <img src="assets/img/Logo.png" alt="" />
+</a>
 
 <script src="scripts/main.js" defer></script>
 </body>

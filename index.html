@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trinbago Pepper Sauce — Bring De Trini Heat. Bottled Since 2018.</title>
+<title>Trinbago Pepper Sauce — Bring De Trini Heat. Estd 2018.</title>
 <meta name="description" content="Hand-crafted Caribbean pepper sauce, born in Trinidad &amp; Tobago. Small-batch scotch bonnet heat, family recipe, real fire. From de island to your table." />
 <meta property="og:title" content="Trinbago Pepper Sauce — Bring De Trini Heat" />
 <meta property="og:description" content="Real Caribbean pepper sauce. Small batch. Scotch bonnet fire. Bottled with love since 2018." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/img/three-bottles.png" />
+<meta property="og:image" content="assets/img/Logo.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Caveat:wght@500;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles/globals.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0707'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A0707' stroke='%23E51D1F' stroke-width='6'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Bungee,Impact' font-size='38' fill='%23E51D1F'%3ET%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="assets/img/Logo.png" />
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="nav" id="nav">
-  <a href="index.html" class="nav-brand">Trinbago</a>
+  <a href="index.html" class="nav-brand">
+    <img src="assets/img/Logo.png" alt="Trinbago Pepper Sauce logo" class="nav-logo" />
+    Trinbago
+  </a>
   <div class="nav-links" id="navLinks">
     <a href="index.html" class="nav-link" aria-current="page">Home</a>
     <a href="about.html" class="nav-link">De Story</a>
@@ -34,39 +37,52 @@
   </button>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-image">
-    <img src="assets/img/hero-bottle.png" alt="Trinbago Pepper Sauce bottle with scotch bonnet peppers" loading="eager" />
-  </div>
+<!-- HERO — sticker-pack collage with logo + bottle as dual centerpiece -->
+<header class="hero hero-collage">
+  <div class="collage-grain"></div>
 
-  <div class="wrap" style="position:relative; z-index:2; flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding-bottom:6rem; padding-top:10rem;">
-    <div style="max-width: 1200px;">
-      <div class="flex gap-4 fade-up" style="align-items:center; flex-wrap:wrap; animation-delay:0.2s;">
-        <div class="stamp">Estd 2018</div>
-        <div class="eyebrow" style="color:var(--scotch);">Trinidad &amp; Tobago · Real Peppa</div>
-      </div>
-      <h1 class="display fade-up heat-text" style="font-size: clamp(3.5rem, 14vw, 13rem); margin-top: 1.5rem; animation-delay:0.4s; color: var(--bone);">
-        Bring de<br />
-        Trini <span class="text-pepper">Heat.</span>
+  <div class="wrap collage-wrap">
+    <!-- Left: typography stack -->
+    <div class="collage-text">
+      <div class="stamp fade-up" style="animation-delay:0.1s;">★ Estd 2018 · Trinidad &amp; Tobago ★</div>
+      <h1 class="display fade-up" style="animation-delay:0.3s;">
+        <span class="line line-1">Bring</span>
+        <span class="line line-2">de</span>
+        <span class="line line-3 text-pepper">Trini</span>
+        <span class="line line-4 script-shout">Heat.</span>
       </h1>
-    </div>
-
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items:end; margin-top: 4rem;" class="hero-bottom">
-      <p class="lead fade-up" style="animation-delay:0.7s;">
-        Small-batch pepper sauce, born from a <span class="editorial text-scotch" style="font-size:1.4em; line-height:1;">grandma recipe</span> in Port of Spain. Scotch bonnet, habanero, ghost pepper — slow cooked, hand bottled, shipped from de island to your shelf.
+      <p class="lead fade-up" style="animation-delay:0.7s; margin-top: var(--s-6);">
+        Small-batch pepper sauce. Grandma recipe from Port of Spain. Scotch bonnet, habanero, ghost pepper — slow simmered, hand bottled, shipped from de island to your shelf.
       </p>
-      <div class="fade-up flex gap-4" style="animation-delay:0.9s; justify-self:end; flex-wrap:wrap;">
-        <a href="pricing.html" class="btn btn-primary btn-arrow">Grab a Bottle</a>
+      <div class="fade-up flex gap-4" style="animation-delay:0.9s; margin-top: var(--s-7); flex-wrap:wrap;">
+        <a href="pricing.html" class="btn btn-primary btn-arrow btn-drip">Grab a Bottle</a>
         <a href="experience.html" class="btn btn-arrow">See De Heat Scale</a>
       </div>
+    </div>
+
+    <!-- Right: the bottle, prominent -->
+    <div class="collage-bottle fade-up" style="animation-delay:0.5s;">
+      <div class="bottle-mount">
+        <img src="assets/img/saucebottle.png" alt="Trinbago Pepper Sauce bottle" />
+      </div>
+      <!-- Floating logo overlay -->
+      <div class="collage-logo">
+        <img src="assets/img/Logo.png" alt="Trinbago Pepper Sauce official logo" />
+      </div>
+      <!-- Floating sticker accents -->
+      <div class="collage-sticker collage-sticker-1">★ Real<br />Peppa</div>
+      <div class="collage-sticker collage-sticker-2">100%<br />Trini</div>
+      <div class="collage-sticker collage-sticker-3">No<br />Joke</div>
     </div>
   </div>
 
   <div class="scroll-indicator">Scroll fuh more</div>
 </header>
 
-<!-- MARQUEE -->
+<!-- CAUTION TAPE — heat warning between sections -->
+<div class="caution-tape" aria-hidden="true"></div>
+
+<!-- MARQUEE — bold pepper red -->
 <section class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span class="marquee-item">Trinbago</span>
@@ -90,114 +106,124 @@
   </div>
 </section>
 
-<!-- MISSION / EDITORIAL SPREAD -->
+<!-- INTERACTIVE HEAT SLIDER — unique brand feature -->
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="ribbon-row" data-reveal>
+      <div class="ribbon"><span class="star">★</span> How Much Heat Yuh Want? <span class="star">★</span></div>
+    </div>
+
+    <div class="grid-12 mt-8">
+      <div style="grid-column: 1 / span 5;" data-reveal>
+        <p class="lead">Slide it. We'll match yuh to de bottle. <span class="editorial text-scotch" style="font-size:1.4em;">Real talk:</span> if yuh ain't sure, start at Carnival. Most of De Crew lives there.</p>
+      </div>
+      <div style="grid-column: 7 / -1;" data-reveal data-delay="2">
+        <div class="scoville-slider">
+          <div class="mono text-dim">Scoville Heat Units</div>
+          <div class="heat-display" id="heatDisplay">120,000</div>
+          <input type="range" id="heatSlider" min="0" max="350" value="120" step="10" aria-label="Heat slider" />
+          <div class="heat-bar-labels">
+            <span>0K</span>
+            <span>100K</span>
+            <span>200K</span>
+            <span>350K</span>
+          </div>
+          <div class="verdict" id="heatVerdict">→ Yuh built fuh de Carnival bottle.</div>
+          <a href="pricing.html" id="heatCTA" class="btn btn-pepper btn-arrow mt-6">Grab Carnival ($14)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAUTION TAPE TILT -->
+<div class="caution-tape caution-tape-tilt" aria-hidden="true"></div>
+
+<!-- DE STORY — sticker collage layout -->
 <section class="section">
   <div class="wrap">
     <div class="grid-12">
-      <div style="grid-column: 1 / span 4;" data-reveal>
-        <span class="eyebrow">001 — De Story</span>
+      <div style="grid-column: 1 / span 5;" data-reveal>
+        <div class="polaroid" style="--rot: -4deg;">
+          <img src="assets/img/market-stall.png" alt="Trinidad street market" />
+          <p class="polaroid-caption">— Port of Spain · Sunday market —</p>
+        </div>
       </div>
-      <div style="grid-column: 5 / -1;">
-        <h2 class="h-1" data-reveal>
-          From a <span class="editorial text-scotch">grandma kitchen</span><br /> in Port of Spain.
+      <div style="grid-column: 7 / -1;">
+        <div class="flex gap-4 items-center" data-reveal>
+          <div class="section-stamp">01</div>
+          <div class="eyebrow">De Story</div>
+        </div>
+        <h2 class="h-1 mt-6" data-reveal>
+          From a <span class="editorial text-scotch">grandma kitchen</span><br />in Port of Spain.
         </h2>
-        <p class="lead mt-8" data-reveal data-delay="2">
-          Trinbago started in a Trinidad kitchen, with a wooden mortar and a recipe nobody wrote down. Three generations later, we still don't write it down — we just bottle it. Real scotch bonnet, real shado beni, real fire. No shortcuts. No preservatives. No apologies.
+        <p class="lead mt-6" data-reveal data-delay="2">
+          Trinbago started in a Trinidad kitchen, with a wooden mortar and a recipe nobody wrote down. Three generations later, we still don't write it down — we just bottle it. Real scotch bonnet. Real shado beni. Real fire.
         </p>
         <div class="mt-8" data-reveal data-delay="3">
-          <a href="about.html" class="btn btn-pepper btn-arrow">Read De Full Story</a>
+          <a href="about.html" class="btn btn-pepper btn-arrow btn-drip">Read De Full Story</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THREE PILLARS -->
-<section class="section" style="background: var(--bg-1); border-block: 2px solid var(--pepper);">
-  <div class="wrap">
-    <div class="flex justify-between items-center" style="margin-bottom: 5rem; flex-wrap:wrap; gap: var(--s-6);" data-reveal>
-      <div>
-        <span class="eyebrow">002 — How We Build De Sauce</span>
-        <h2 class="h-2 mt-4">Three things.<br /><span class="editorial text-scotch">Done de right way.</span></h2>
-      </div>
-      <p class="text-dim mono">01 — Grow &nbsp;·&nbsp; 02 — Bottle &nbsp;·&nbsp; 03 — Burn</p>
+<!-- THREE STICKERS — replaces pillar grid with sticker-pack collage -->
+<section class="section" style="background: var(--bg-1); position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; opacity:0.04; background-image: url('assets/img/pepper-texture.png'); background-size: cover; background-position: center;"></div>
+
+  <div class="wrap" style="position:relative;">
+    <div class="ribbon-row" data-reveal>
+      <div class="ribbon ribbon-dark"><span class="star">★</span> How We Build De Sauce <span class="star">★</span></div>
     </div>
 
-    <div class="grid grid-3" style="gap: 0; border: 2px solid var(--pepper);">
-      <!-- Grow -->
-      <article class="pillar" data-reveal>
-        <div class="pillar-num mono">/01</div>
-        <div class="pillar-image">
-          <img src="assets/img/peppers-macro.png" alt="Fresh scotch bonnet peppers" loading="lazy" />
-        </div>
-        <div class="pillar-body">
-          <h3 class="h-3"><span class="text-pepper">Grow</span> de pepper.</h3>
-          <p class="text-soft mt-4">Sourced from Caribbean farms — Trinidad scotch bonnet, Tobago habanero, ghost pepper from de back yard. Picked ripe. Picked when de heat is at its peak. No imports from de other side of de world.</p>
-          <ul class="pillar-list mt-6">
-            <li>Trinidad scotch bonnet (rare cultivar)</li>
-            <li>Tobago habanero (sweet + savage)</li>
-            <li>Ghost pepper (Inferno line only)</li>
-            <li>Shado beni + culantro from de garden</li>
-          </ul>
-        </div>
+    <div class="sticker-grid mt-8">
+      <article class="sticker" style="--rot: -3deg;" data-reveal>
+        <div class="sticker-num">/01</div>
+        <h3 class="display sticker-title">Grow</h3>
+        <p>Caribbean farms. Trinidad scotch bonnet, Tobago habanero, ghost pepper from de back yard. Picked ripe, picked when de heat is at its peak.</p>
+        <div class="sticker-tag">Real Peppa</div>
       </article>
 
-      <!-- Bottle -->
-      <article class="pillar" data-reveal data-delay="2">
-        <div class="pillar-num mono">/02</div>
-        <div class="pillar-image">
-          <img src="assets/img/three-bottles.png" alt="Three bottles of Trinbago pepper sauce" loading="lazy" />
-        </div>
-        <div class="pillar-body">
-          <h3 class="h-3"><span class="text-scotch">Bottle</span> by hand.</h3>
-          <p class="text-soft mt-4">Small batches. Cold pressed. Slow simmered. We bottle when it's ready — not when de calendar says so. Every bottle gets a date stamp and a batch number, because real food deserves real respect.</p>
-          <ul class="pillar-list mt-6">
-            <li>Cold-pressed pepper extract</li>
-            <li>Slow simmered for 6+ hours</li>
-            <li>Bottled in 5oz artisan glass</li>
-            <li>Date + batch stamped, every time</li>
-          </ul>
-        </div>
+      <article class="sticker sticker--alt" style="--rot: 2deg;" data-reveal data-delay="1">
+        <div class="sticker-num">/02</div>
+        <h3 class="display sticker-title">Bottle</h3>
+        <p>Cold-pressed. Slow simmered for 6+ hours. Bottled in 5oz artisan glass. Date stamped, batch numbered, real food respect.</p>
+        <div class="sticker-tag">By Hand</div>
       </article>
 
-      <!-- Burn -->
-      <article class="pillar" data-reveal data-delay="3">
-        <div class="pillar-num mono">/03</div>
-        <div class="pillar-image">
-          <img src="assets/img/market-stall.png" alt="Trinidad street market" loading="lazy" />
-        </div>
-        <div class="pillar-body">
-          <h3 class="h-3"><span class="text-habanero">Burn</span> with love.</h3>
-          <p class="text-soft mt-4">Heat is not de point — flavor is. We build sauces that punch first, then linger. Mild for de weekend cookout. Hot for de jerk chicken. Inferno for when you want de room to know you not playin'.</p>
-          <ul class="pillar-list mt-6">
-            <li>Three heat tiers, one philosophy</li>
-            <li>Flavor first, fire second</li>
-            <li>No high-fructose, no fake heat</li>
-            <li>Pairs with everything you cook</li>
-          </ul>
-        </div>
+      <article class="sticker sticker--scotch" style="--rot: -2deg;" data-reveal data-delay="2">
+        <div class="sticker-num">/03</div>
+        <h3 class="display sticker-title">Burn</h3>
+        <p>Heat is not de point — flavor is. We build sauces that punch first, then linger. Three tiers. One philosophy. Pure Trini fire.</p>
+        <div class="sticker-tag">With Love</div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- LARGE STATEMENT -->
+<!-- BIG QUOTE STAMP -->
 <section class="section">
-  <div class="wrap center" style="max-width: 1200px;">
-    <p class="editorial" style="font-size: clamp(1.75rem, 4vw, 3.5rem); color: var(--text); line-height:1.15;" data-reveal>
-      "Yuh ain't taste pepper sauce <br />until you taste <span class="text-pepper" style="font-style: normal; font-family: var(--font-display);">real</span> peppa."
-    </p>
-    <div class="mono mt-6 text-faint" data-reveal data-delay="1">— Granny's only marketing line —</div>
+  <div class="wrap" style="max-width: 1100px; text-align:center;">
+    <div data-reveal style="display:inline-block;">
+      <div class="quote-stamp">
+        Yuh ain't taste pepper sauce<br />until you taste real peppa.
+      </div>
+    </div>
+    <div class="mono mt-8 text-faint" data-reveal data-delay="1">— Granny's only marketing line —</div>
   </div>
 </section>
 
-<!-- WHAT'S INSIDE / GRID -->
-<section class="section" style="background: var(--bg-1); border-block: 2px solid var(--pepper);">
+<!-- CAUTION TAPE -->
+<div class="caution-tape" aria-hidden="true"></div>
+
+<!-- INSIDE DE BOTTLE — paper-cut card grid -->
+<section class="section" style="background: var(--bg-1);">
   <div class="wrap">
-    <div data-reveal>
-      <span class="eyebrow">003 — Inside De Bottle</span>
-      <h2 class="h-1 mt-4">Eight ingredients. <br /><span class="editorial text-scotch">Zero shortcuts.</span></h2>
+    <div class="ribbon-row" data-reveal>
+      <div class="ribbon"><span class="star">★</span> Inside De Bottle <span class="star">★</span></div>
     </div>
+    <h2 class="h-1 center mt-8" data-reveal>Eight ingredients. <span class="editorial text-scotch">Zero shortcuts.</span></h2>
 
     <div class="grid grid-4 mt-8 inside-grid">
       <div class="inside-card" data-reveal>
@@ -213,7 +239,7 @@
       <div class="inside-card" data-reveal data-delay="2">
         <div class="inside-num">03</div>
         <h4 class="h-4">Shado Beni</h4>
-        <p class="text-soft">Caribbean culantro. Gives de sauce its grassy, herbal Trini signature. You can't fake this.</p>
+        <p class="text-soft">Caribbean culantro. Gives de sauce its grassy, herbal Trini signature. Yuh can't fake this.</p>
       </div>
       <div class="inside-card" data-reveal data-delay="3">
         <div class="inside-num">04</div>
@@ -228,7 +254,7 @@
       <div class="inside-card" data-reveal data-delay="1">
         <div class="inside-num">06</div>
         <h4 class="h-4">Mustard Seed</h4>
-        <p class="text-soft">Toasted, ground in-house. Adds de slight tang that makes Trini sauce different from anywhere else.</p>
+        <p class="text-soft">Toasted, ground in-house. Adds de slight tang that makes Trini sauce different.</p>
       </div>
       <div class="inside-card" data-reveal data-delay="2">
         <div class="inside-num">07</div>
@@ -244,60 +270,61 @@
   </div>
 </section>
 
-<!-- STATS / NUMBERS -->
-<section class="section section-tight" style="border-bottom: 1px solid var(--border);">
+<!-- STATS -->
+<section class="section section-tight" style="background: var(--pepper); color: var(--bone); border-block: 4px solid var(--bg);">
   <div class="wrap">
     <div class="grid grid-4 stats-grid">
       <div data-reveal>
-        <div class="display text-pepper" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9;" data-counter="7" data-suffix="">7</div>
-        <div class="mono text-dim mt-3">Pepper Cultivars</div>
+        <div class="display" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9; color: var(--bone);" data-counter="7">7</div>
+        <div class="mono" style="color: rgba(245,235,224,0.7);">Pepper Cultivars</div>
       </div>
       <div data-reveal data-delay="1">
-        <div class="display text-pepper" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9;" data-counter="6" data-suffix="">6</div>
-        <div class="mono text-dim mt-3">Years In De Game</div>
+        <div class="display" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9; color: var(--bone);" data-counter="6">6</div>
+        <div class="mono" style="color: rgba(245,235,224,0.7);">Years In De Game</div>
       </div>
       <div data-reveal data-delay="2">
-        <div class="display text-pepper" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9;" data-counter="350" data-suffix="K">350K</div>
-        <div class="mono text-dim mt-3">Max Scoville Heat</div>
+        <div class="display" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9; color: var(--scotch);" data-counter="350" data-suffix="K">350K</div>
+        <div class="mono" style="color: rgba(245,235,224,0.7);">Max Scoville Heat</div>
       </div>
       <div data-reveal data-delay="3">
-        <div class="display text-pepper" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9;">100<span style="font-size:0.6em;">%</span></div>
-        <div class="mono text-dim mt-3">Real Trini Recipe</div>
+        <div class="display" style="font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9; color: var(--bone);">100<span style="font-size:0.6em;">%</span></div>
+        <div class="mono" style="color: rgba(245,235,224,0.7);">Real Trini Recipe</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIAL / EARLY VOICES -->
+<!-- TESTIMONIALS — polaroid-style -->
 <section class="section">
   <div class="wrap">
-    <span class="eyebrow" data-reveal>004 — What People Sayin'</span>
-    <div class="grid grid-3 mt-8">
-      <blockquote class="quote-card" data-reveal>
-        <p class="editorial" style="font-size: 1.75rem; color: var(--text); line-height:1.15;">"I been to Trinidad for Carnival three times. This is de closest thing to grandma's kitchen back in San Fernando."</p>
-        <footer class="mono mt-6 text-dim">— Marcus T. &nbsp;/&nbsp; Brooklyn, NY</footer>
+    <div class="ribbon-row" data-reveal>
+      <div class="ribbon ribbon-dark"><span class="star">★</span> What People Sayin' <span class="star">★</span></div>
+    </div>
+    <div class="grid grid-3 mt-8 polaroid-row">
+      <blockquote class="polaroid" style="--rot: -3deg;" data-reveal>
+        <p class="polaroid-quote">"I been to Trinidad for Carnival three times. This is de closest thing to grandma's kitchen back in San Fernando."</p>
+        <p class="polaroid-caption">— Marcus T. · Brooklyn</p>
       </blockquote>
-      <blockquote class="quote-card" data-reveal data-delay="1">
-        <p class="editorial" style="font-size: 1.75rem; color: var(--text); line-height:1.15;">"De Inferno bottle is no joke. I put 3 drops on jerk chicken and my husband had to lay down. 10/10."</p>
-        <footer class="mono mt-6 text-dim">— Sarah R. &nbsp;/&nbsp; Atlanta, GA</footer>
+      <blockquote class="polaroid" style="--rot: 2deg;" data-reveal data-delay="1">
+        <p class="polaroid-quote">"De Inferno is no joke. I put 3 drops on jerk chicken and my husband had to lay down. 10/10."</p>
+        <p class="polaroid-caption">— Sarah R. · Atlanta</p>
       </blockquote>
-      <blockquote class="quote-card" data-reveal data-delay="2">
-        <p class="editorial" style="font-size: 1.75rem; color: var(--text); line-height:1.15;">"Tried every Caribbean sauce on de market. Nothing else hits like this. The shado beni makes it."</p>
-        <footer class="mono mt-6 text-dim">— Devon K. &nbsp;/&nbsp; Toronto, ON</footer>
+      <blockquote class="polaroid" style="--rot: -2deg;" data-reveal data-delay="2">
+        <p class="polaroid-quote">"Tried every Caribbean sauce on de market. Nothing else hits like this. The shado beni makes it."</p>
+        <p class="polaroid-caption">— Devon K. · Toronto</p>
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- BOTTLES TEASE -->
-<section class="section" style="background: var(--bg-1); border-block: 2px solid var(--pepper);">
+<!-- CAUTION TAPE -->
+<div class="caution-tape" aria-hidden="true"></div>
+
+<!-- BOTTLES TEASE — sticker-style -->
+<section class="section" style="background: var(--bg-1);">
   <div class="wrap">
-    <div class="flex justify-between items-center" style="flex-wrap:wrap; gap: var(--s-6);" data-reveal>
-      <div>
-        <span class="eyebrow">005 — De Bottles</span>
-        <h2 class="h-1 mt-4">Three heats.<br /><span class="editorial text-scotch">One philosophy.</span></h2>
-      </div>
-      <a href="pricing.html" class="btn btn-pepper btn-arrow">See All Bottles</a>
+    <div class="ribbon-row" data-reveal>
+      <div class="ribbon"><span class="star">★</span> Pick Yuh Bottle <span class="star">★</span></div>
     </div>
 
     <div class="grid grid-3 mt-8 tier-grid">
@@ -323,6 +350,10 @@
         <p class="text-soft mt-4">Ghost pepper enters de chat. Use sparingly. Respect de bottle. Tell yuh friends you survived.</p>
       </div>
     </div>
+
+    <div class="center mt-8">
+      <a href="pricing.html" class="btn btn-pepper btn-arrow btn-drip">See All Bottles</a>
+    </div>
   </div>
 </section>
 
@@ -330,8 +361,10 @@
 <section class="section" style="padding: clamp(6rem, 12vw, 12rem) 0; position:relative; overflow:hidden;">
   <div style="position:absolute; inset:0; background: radial-gradient(ellipse at center, var(--pepper-glow), transparent 60%); filter: blur(40px); pointer-events:none;"></div>
   <div class="wrap center" style="position:relative;">
-    <span class="eyebrow" data-reveal>006 — De Ask</span>
-    <h2 class="h-mega mt-6 heat-text" data-reveal data-delay="1">
+    <div class="ribbon-row" data-reveal>
+      <div class="ribbon ribbon-dark"><span class="star">★</span> De Ask <span class="star">★</span></div>
+    </div>
+    <h2 class="h-mega mt-8 heat-text" data-reveal data-delay="1">
       Don't<br />
       <span class="editorial text-scotch">sleep on</span><br />
       de fire.
@@ -340,7 +373,7 @@
       Small-batch means we run out. When a batch sells, it sells. Grab a bottle now or join De Crew for first dibs on every drop.
     </p>
     <div class="mt-8 flex gap-4" style="justify-content:center; flex-wrap:wrap;" data-reveal data-delay="3">
-      <a href="pricing.html" class="btn btn-primary btn-arrow">Order a Bottle</a>
+      <a href="pricing.html" class="btn btn-primary btn-arrow btn-drip">Order a Bottle</a>
       <a href="giveaway.html" class="btn btn-arrow">Win a 6-Pack</a>
     </div>
     <p class="mono text-faint mt-6" data-reveal data-delay="4">— Free shipping on orders over $40 —</p>
@@ -393,67 +426,215 @@
   </div>
 </footer>
 
+<!-- Floating brand badge -->
+<a href="pricing.html" class="floating-brand" aria-label="Buy a bottle">
+  <img src="assets/img/Logo.png" alt="" />
+</a>
+
 <style>
-  /* Page-specific styles */
-  .pillar {
-    background: var(--bg);
-    border-right: 2px solid var(--pepper);
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    transition: background var(--dur);
-  }
-  .pillar:last-child { border-right: 0; }
-  .pillar:hover { background: var(--bg-2); }
-  .pillar-num {
-    position: absolute;
-    top: var(--s-5);
-    right: var(--s-5);
-    color: var(--pepper);
-    z-index: 2;
-    font-weight: 700;
-  }
-  .pillar-image {
-    height: 280px;
-    overflow: hidden;
-    position: relative;
-  }
-  .pillar-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent, var(--bg) 95%);
-  }
-  .pillar-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: contrast(1.1) saturate(1.05);
-    transition: transform 1.2s var(--ease-out);
-  }
-  .pillar:hover .pillar-image img { transform: scale(1.06); }
-  .pillar-body { padding: var(--s-7); padding-top: var(--s-5); }
-  .pillar-list { display: flex; flex-direction: column; gap: var(--s-3); }
-  .pillar-list li {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: 0.06em;
-    color: var(--text-soft);
-    padding-left: var(--s-5);
-    position: relative;
-  }
-  .pillar-list li::before {
-    content: '✦';
-    position: absolute;
-    left: 0;
-    color: var(--pepper);
-    font-weight: 700;
-  }
-  @media (max-width: 900px) {
-    .pillar { border-right: 0; border-bottom: 2px solid var(--pepper); }
-    .pillar:last-child { border-bottom: 0; }
+  /* ---------- Logo in nav ---------- */
+  .nav-brand { gap: 0.6rem; }
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
   }
 
+  /* ---------- HERO COLLAGE ---------- */
+  .hero-collage {
+    min-height: 100svh;
+    background:
+      radial-gradient(ellipse at 30% 20%, var(--pepper-glow) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, var(--scotch-glow) 0%, transparent 60%),
+      var(--bg);
+    overflow: hidden;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    position: relative;
+  }
+  .collage-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
+    opacity: 0.15;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  .collage-wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--gutter);
+    align-items: center;
+    min-height: calc(100svh - 12rem);
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 900px) { .collage-wrap { grid-template-columns: 1fr; } }
+
+  .collage-text { position: relative; }
+  .collage-text h1 {
+    font-size: clamp(4rem, 14vw, 12rem);
+    line-height: 0.92;
+    margin-top: var(--s-6);
+  }
+  .collage-text h1 .line {
+    display: block;
+    transform-origin: left;
+  }
+  .collage-text h1 .line-1 { transform: rotate(-1deg); }
+  .collage-text h1 .line-2 { transform: rotate(0.5deg) translateX(40px); font-family: var(--font-script); color: var(--scotch); font-size: 0.55em; line-height: 0.6; }
+  .collage-text h1 .line-3 { transform: rotate(-0.5deg); }
+  .collage-text h1 .line-4.script-shout {
+    font-family: var(--font-script);
+    color: var(--bone);
+    font-size: 1.2em;
+    text-shadow:
+      4px 4px 0 var(--pepper-deep),
+      6px 6px 0 var(--bg);
+    transform: rotate(-2deg) translateX(20px);
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---------- BOTTLE COLLAGE ---------- */
+  .collage-bottle {
+    position: relative;
+    height: 80vh;
+    max-height: 760px;
+    display: grid;
+    place-items: center;
+  }
+  .collage-bottle .bottle-mount {
+    width: 100%;
+    height: 100%;
+  }
+  .collage-bottle .bottle-mount img {
+    max-height: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+  .collage-logo {
+    position: absolute;
+    top: 6%;
+    right: -4%;
+    width: 28%;
+    max-width: 200px;
+    z-index: 3;
+    transform: rotate(8deg);
+    animation: floatLogo 6s ease-in-out infinite;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.7));
+  }
+  @keyframes floatLogo {
+    0%, 100% { transform: rotate(8deg) translateY(0); }
+    50% { transform: rotate(12deg) translateY(-10px); }
+  }
+
+  .collage-sticker {
+    position: absolute;
+    background: var(--scotch);
+    color: var(--bg);
+    font-family: var(--font-display);
+    text-align: center;
+    padding: 0.85rem 1.1rem;
+    border-radius: 50%;
+    border: 3px solid var(--bg);
+    font-size: 0.85rem;
+    line-height: 1.05;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    z-index: 4;
+  }
+  .collage-sticker-1 {
+    top: 18%;
+    left: -5%;
+    background: var(--pepper);
+    color: var(--bone);
+    transform: rotate(-12deg);
+    animation: wobbleSlow 5s ease-in-out infinite;
+  }
+  .collage-sticker-2 {
+    bottom: 30%;
+    right: -2%;
+    transform: rotate(15deg);
+    animation: wobbleSlow 5s ease-in-out infinite reverse;
+    animation-delay: 1s;
+  }
+  .collage-sticker-3 {
+    bottom: 8%;
+    left: 8%;
+    background: var(--bg);
+    color: var(--bone);
+    border-color: var(--scotch);
+    transform: rotate(-8deg);
+    animation: wobbleSlow 5s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  @keyframes wobbleSlow {
+    0%, 100% { transform: rotate(var(--r, -12deg)) translateY(0); }
+    50% { transform: rotate(calc(var(--r, -12deg) + 4deg)) translateY(-6px); }
+  }
+  @media (max-width: 900px) {
+    .collage-bottle { height: 60vh; max-height: 500px; }
+    .collage-logo { width: 36%; right: -8%; }
+    .collage-sticker { font-size: 0.7rem; padding: 0.6rem 0.8rem; }
+  }
+
+  /* ---------- Ribbon row centering ---------- */
+  .ribbon-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--s-7);
+  }
+
+  /* ---------- Sticker grid (replaces pillars) ---------- */
+  .sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-8);
+    padding: var(--s-7) var(--s-5);
+  }
+  @media (max-width: 900px) { .sticker-grid { grid-template-columns: 1fr; gap: var(--s-7); } }
+  .sticker .sticker-num {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: 0.2em;
+    color: currentColor;
+    opacity: 0.6;
+    margin-bottom: var(--s-3);
+  }
+  .sticker .sticker-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 0.95;
+    margin-bottom: var(--s-4);
+  }
+  .sticker p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: currentColor;
+  }
+  .sticker-tag {
+    display: inline-block;
+    margin-top: var(--s-5);
+    padding: 0.35rem 0.75rem;
+    border: 2px solid currentColor;
+    font-family: var(--font-script);
+    font-size: 1.1rem;
+    transform: rotate(-2deg);
+  }
+
+  /* ---------- Polaroid testimonial ---------- */
+  .polaroid-row { gap: var(--s-7); padding: var(--s-7) 0; align-items: center; justify-items: center; }
+  .polaroid-quote {
+    font-family: var(--font-editorial);
+    font-size: 1.5rem;
+    color: var(--bg);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .polaroid-row .polaroid { max-width: none; width: 100%; padding-bottom: 30px; }
+
+  /* ---------- Inside grid (kept simple) ---------- */
   .inside-grid { gap: 1px; background: var(--pepper); border: 2px solid var(--pepper); }
   .inside-card {
     background: var(--bg-1);
@@ -461,7 +642,7 @@
     transition: background var(--dur);
     min-height: 220px;
   }
-  .inside-card:hover { background: var(--bg-2); }
+  .inside-card:hover { background: var(--bg-2); transform: translateY(-2px); }
   .inside-num {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -471,11 +652,6 @@
   .inside-card h4 { margin-bottom: var(--s-4); }
 
   .stats-grid { gap: var(--s-7); }
-
-  .quote-card {
-    border-left: 3px solid var(--pepper);
-    padding-left: var(--s-6);
-  }
 
   .tier-grid { gap: var(--s-5); }
   .tier-card {
@@ -498,14 +674,47 @@
     align-items: baseline;
     gap: var(--s-3);
   }
-
-  @media (max-width: 800px) {
-    .hero-bottom { grid-template-columns: 1fr !important; gap: var(--s-6) !important; }
-    .hero-bottom > div:last-child { justify-self: stretch !important; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  }
 </style>
 
 <script src="scripts/main.js" defer></script>
+<script>
+  // Interactive Scoville heat slider
+  (function() {
+    const slider = document.getElementById('heatSlider');
+    const display = document.getElementById('heatDisplay');
+    const verdict = document.getElementById('heatVerdict');
+    const cta = document.getElementById('heatCTA');
+    if (!slider) return;
+
+    const fmt = (n) => n.toLocaleString();
+    const update = () => {
+      const v = parseInt(slider.value, 10) * 1000;
+      display.textContent = fmt(v);
+
+      let text, ctaText, ctaHref = 'pricing.html';
+      if (v < 50000) {
+        text = '→ Yuh tippy-toe in. Try Original ($12).';
+        ctaText = 'Grab Original ($12)';
+        display.style.color = 'var(--scotch)';
+      } else if (v < 200000) {
+        text = '→ Yuh built fuh de Carnival bottle.';
+        ctaText = 'Grab Carnival ($14)';
+        display.style.color = 'var(--habanero)';
+      } else if (v < 320000) {
+        text = '→ Inferno calling yuh name.';
+        ctaText = 'Grab Soca Inferno ($18)';
+        display.style.color = 'var(--pepper)';
+      } else {
+        text = '→ Yuh a maniac. We respect that. Get Inferno + extra.';
+        ctaText = 'Grab Inferno ($18)';
+        display.style.color = 'var(--pepper-bright)';
+      }
+      verdict.textContent = text;
+      cta.firstChild.textContent = ctaText + ' ';
+    };
+    slider.addEventListener('input', update);
+    update();
+  })();
+</script>
 </body>
 </html>
