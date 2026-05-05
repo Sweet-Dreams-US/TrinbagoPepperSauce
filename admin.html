@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Operator Dashboard — Trinbago Ops</title>
+<meta name="description" content="Internal operator dashboard for Trinbago Pepper Sauce." />
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Caveat:wght@500;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/globals.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0707'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A0707' stroke='%23E51D1F' stroke-width='6'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Bungee,Impact' font-size='38' fill='%23E51D1F'%3ET%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="admin-body">
+
+<!-- Sidebar -->
+<aside class="admin-sidebar">
+  <a href="index.html" class="admin-brand">
+    Trinbago
+    <span class="admin-brand-tag mono">OPS</span>
+  </a>
+
+  <nav class="admin-nav">
+    <div class="admin-nav-group">
+      <div class="admin-nav-label mono">De Floor</div>
+      <a href="#" class="admin-nav-item active"><span class="ic">▣</span> Dashboard</a>
+      <a href="#" class="admin-nav-item"><span class="ic">◆</span> Orders</a>
+      <a href="#" class="admin-nav-item"><span class="ic">◉</span> Subscribers</a>
+      <a href="#" class="admin-nav-item"><span class="ic">◐</span> Inventory</a>
+      <a href="#" class="admin-nav-item"><span class="ic">◇</span> Batches</a>
+    </div>
+    <div class="admin-nav-group">
+      <div class="admin-nav-label mono">Growth</div>
+      <a href="#" class="admin-nav-item"><span class="ic">★</span> De Crew</a>
+      <a href="#" class="admin-nav-item"><span class="ic">⌖</span> Wholesale</a>
+      <a href="#" class="admin-nav-item"><span class="ic">⊛</span> Giveaway</a>
+      <a href="#" class="admin-nav-item"><span class="ic">$</span> Revenue</a>
+    </div>
+    <div class="admin-nav-group">
+      <div class="admin-nav-label mono">System</div>
+      <a href="#" class="admin-nav-item"><span class="ic">⚙</span> Settings</a>
+      <a href="#" class="admin-nav-item"><span class="ic">↗</span> Reports</a>
+    </div>
+  </nav>
+
+  <div class="admin-sidebar-foot">
+    <div class="admin-user">
+      <div class="admin-avatar">KA</div>
+      <div>
+        <div style="font-size: 0.875rem;">Kareem A.</div>
+        <div class="mono text-faint" style="font-size: 0.6rem;">Founder / Bottle Boss</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="admin-main">
+  <header class="admin-topbar">
+    <div>
+      <div class="mono text-dim">Tuesday — May 5, 2026</div>
+      <h1 style="font-family: var(--font-display); font-size: 2rem; line-height: 1; margin-top: 4px;">Mornin', Kareem.</h1>
+    </div>
+    <div class="admin-topbar-actions">
+      <div class="admin-search">
+        <span class="mono">⌕</span>
+        <input type="search" placeholder="Search orders, subscribers, batches…" />
+        <span class="mono text-faint">⌘ K</span>
+      </div>
+      <button class="btn-icon" aria-label="Notifications">
+        <span>🔔</span>
+        <span class="badge">5</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Top stats row -->
+  <section class="kpi-row">
+    <div class="kpi">
+      <div class="mono text-dim">Bottles Shipped (MTD)</div>
+      <div class="kpi-value display">847</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width: 68%;"></div></div>
+      <div class="kpi-meta mono"><span class="trend-up">▲ +18% MoM</span></div>
+    </div>
+    <div class="kpi">
+      <div class="mono text-dim">Active Subscribers</div>
+      <div class="kpi-value display">312</div>
+      <div class="kpi-meta mono"><span class="trend-up">▲ +24 last 30d</span> &nbsp;·&nbsp; +9% MoM</div>
+    </div>
+    <div class="kpi">
+      <div class="mono text-dim">Giveaway Entries</div>
+      <div class="kpi-value display">3,412</div>
+      <div class="kpi-meta mono"><span class="trend-up">▲ Closes in 25d</span></div>
+    </div>
+    <div class="kpi">
+      <div class="mono text-dim">Monthly Revenue</div>
+      <div class="kpi-value display">$28.4K</div>
+      <div class="kpi-meta mono"><span class="trend-up">▲ vs $22K target</span></div>
+    </div>
+  </section>
+
+  <!-- Two column main area -->
+  <section class="admin-grid">
+    <!-- Left big -->
+    <div class="admin-col">
+      <!-- Sauce sales pacing -->
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <div class="mono text-dim">Bottle Sales · Last 6 Months</div>
+            <h3 class="display admin-h3">Selling Out Faster</h3>
+          </div>
+          <div class="chip chip-fire mono">On Pace ✓</div>
+        </div>
+
+        <div class="bar-chart">
+          <div class="bar" style="--h: 28%;"><span>Dec</span></div>
+          <div class="bar" style="--h: 42%;"><span>Jan</span></div>
+          <div class="bar" style="--h: 56%;"><span>Feb</span></div>
+          <div class="bar" style="--h: 68%;"><span>Mar</span></div>
+          <div class="bar bar-active" style="--h: 84%;"><span>Apr</span></div>
+          <div class="bar bar-projected" style="--h: 96%;"><span>May</span></div>
+        </div>
+        <div class="bar-legend mono">
+          <span><span class="dot dot-fire"></span> Actual</span>
+          <span><span class="dot dot-faint"></span> Projected</span>
+        </div>
+      </div>
+
+      <!-- Recent orders -->
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <div class="mono text-dim">Recent Orders</div>
+            <h3 class="display admin-h3">Last 24 Hours</h3>
+          </div>
+          <a href="#" class="mono text-fire">View All →</a>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Bottles</th>
+              <th>Source</th>
+              <th>Time</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Marcus Thompson</strong><br /><span class="mono text-dim">marcus.t@gmail.com</span></td>
+              <td><span class="tier-pill tier-pill-elite">Founders 6</span></td>
+              <td>Subscription</td>
+              <td>2 min ago</td>
+              <td><span class="dot-status dot-status-new">New</span></td>
+            </tr>
+            <tr>
+              <td><strong>Sarah Reichert</strong><br /><span class="mono text-dim">sreichert@outlook.com</span></td>
+              <td><span class="tier-pill tier-pill-plus">Trio</span></td>
+              <td>Direct</td>
+              <td>14 min ago</td>
+              <td><span class="dot-status dot-status-new">Picking</span></td>
+            </tr>
+            <tr>
+              <td><strong>Devon Kratzer</strong><br /><span class="mono text-dim">devon.k@me.com</span></td>
+              <td><span class="tier-pill tier-pill-plus">Trio</span></td>
+              <td>Crew Newsletter</td>
+              <td>38 min ago</td>
+              <td><span class="dot-status">Packed</span></td>
+            </tr>
+            <tr>
+              <td><strong>Allie Brennan</strong><br /><span class="mono text-dim">allie.b@yahoo.com</span></td>
+              <td><span class="tier-pill tier-pill-base">Single · Carnival</span></td>
+              <td>Giveaway Entry</td>
+              <td>1 hr ago</td>
+              <td><span class="dot-status">Shipped</span></td>
+            </tr>
+            <tr>
+              <td><strong>Jared Stoller</strong><br /><span class="mono text-dim">jstoller@gmail.com</span></td>
+              <td><span class="tier-pill tier-pill-elite">Founders 6</span></td>
+              <td>Instagram Bio</td>
+              <td>2 hr ago</td>
+              <td><span class="dot-status">Shipped</span></td>
+            </tr>
+            <tr>
+              <td><strong>Emily Worthington</strong><br /><span class="mono text-dim">emilyw@gmail.com</span></td>
+              <td><span class="tier-pill tier-pill-plus">Trio</span></td>
+              <td>Referral · D.K.</td>
+              <td>3 hr ago</td>
+              <td><span class="dot-status">Shipped</span></td>
+            </tr>
+            <tr>
+              <td><strong>Tyler Reinhart</strong><br /><span class="mono text-dim">treinhart@me.com</span></td>
+              <td><span class="tier-pill tier-pill-plus">Trio</span></td>
+              <td>Direct</td>
+              <td>5 hr ago</td>
+              <td><span class="dot-status">Delivered</span></td>
+            </tr>
+            <tr>
+              <td><strong>Hannah Rouch</strong><br /><span class="mono text-dim">hannah.r@gmail.com</span></td>
+              <td><span class="tier-pill tier-pill-elite">Founders 6</span></td>
+              <td>Wholesale Refer</td>
+              <td>6 hr ago</td>
+              <td><span class="dot-status">Delivered</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sauce mix -->
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <div class="mono text-dim">Heat Mix · This Month</div>
+            <h3 class="display admin-h3">847 Bottles Out</h3>
+          </div>
+          <div class="chip mono">Live</div>
+        </div>
+
+        <div class="tier-mix">
+          <div class="mix-row">
+            <div class="mix-label">
+              <span class="tier-pill tier-pill-base">Original</span>
+              <span>$12 · 264 bottles</span>
+            </div>
+            <div class="mix-bar">
+              <div class="mix-fill mix-fill-base" style="width: 31%;"></div>
+            </div>
+            <div class="mix-pct mono">31%</div>
+          </div>
+          <div class="mix-row">
+            <div class="mix-label">
+              <span class="tier-pill tier-pill-plus">Carnival</span>
+              <span>$14 · 408 bottles</span>
+            </div>
+            <div class="mix-bar">
+              <div class="mix-fill mix-fill-plus" style="width: 48%;"></div>
+            </div>
+            <div class="mix-pct mono">48%</div>
+          </div>
+          <div class="mix-row">
+            <div class="mix-label">
+              <span class="tier-pill tier-pill-elite">Soca Inferno</span>
+              <span>$18 · 175 bottles</span>
+            </div>
+            <div class="mix-bar">
+              <div class="mix-fill mix-fill-elite" style="width: 21%;"></div>
+            </div>
+            <div class="mix-pct mono">21%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div class="admin-col">
+      <!-- Today schedule -->
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <div class="mono text-dim">Today · May 5</div>
+            <h3 class="display admin-h3">Kitchen + Floor</h3>
+          </div>
+          <div class="chip mono">Batch Day</div>
+        </div>
+
+        <ul class="schedule">
+          <li>
+            <div class="sched-time mono">07:00</div>
+            <div>
+              <div class="h-4">Pepper delivery — Caribbean Farms</div>
+              <div class="text-soft" style="font-size: 0.875rem;">120 lbs scotch bonnet · 80 lbs habanero</div>
+            </div>
+          </li>
+          <li>
+            <div class="sched-time mono">10:00</div>
+            <div>
+              <div class="h-4">Carnival Batch #142 — start cook</div>
+              <div class="text-soft" style="font-size: 0.875rem;">Targeting 200 bottles · 6hr simmer</div>
+            </div>
+          </li>
+          <li>
+            <div class="sched-time mono">14:00</div>
+            <div>
+              <div class="h-4">Bottle + label — Inferno #038</div>
+              <div class="text-soft" style="font-size: 0.875rem;">96 bottles ready · ship by 18:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="sched-time mono">16:30</div>
+            <div>
+              <div class="h-4">Wholesale call — Gourmet Garage</div>
+              <div class="text-soft" style="font-size: 0.875rem;">120-bottle quarterly order discussion</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Giveaway snapshot -->
+      <div class="admin-card admin-card-fire">
+        <div class="admin-card-head">
+          <div>
+            <div class="mono text-pepper">★ Live Campaign</div>
+            <h3 class="display admin-h3">6-Pack Giveaway</h3>
+          </div>
+        </div>
+
+        <div class="giveaway-stats">
+          <div>
+            <div class="kpi-value display" style="font-size: 2rem;">3,412</div>
+            <div class="mono text-dim">Total Entries</div>
+          </div>
+          <div>
+            <div class="kpi-value display" style="font-size: 2rem;">2,847</div>
+            <div class="mono text-dim">Crew Conversions</div>
+          </div>
+        </div>
+
+        <div class="divider mt-5" style="background: var(--border-strong);"></div>
+
+        <div class="conv-row mt-5">
+          <span class="mono text-dim">→ Crew Newsletter Sign-Ups</span>
+          <strong>2,847 (83%)</strong>
+        </div>
+        <div class="conv-row">
+          <span class="mono text-dim">→ Instagram Followers Gained</span>
+          <strong>+1,247</strong>
+        </div>
+        <div class="conv-row">
+          <span class="mono text-dim">→ Closes In</span>
+          <strong>25d 6h 22m</strong>
+        </div>
+
+        <a href="giveaway.html" class="btn btn-pepper btn-arrow mt-6" style="width:100%; justify-content:center;">View Public Page</a>
+      </div>
+
+      <!-- Quick actions -->
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <div class="mono text-dim">Quick Actions</div>
+            <h3 class="display admin-h3">Operator Tools</h3>
+          </div>
+        </div>
+
+        <div class="quick-grid">
+          <button class="quick-btn">
+            <span>📥</span>
+            <span>Export Crew CSV</span>
+          </button>
+          <button class="quick-btn">
+            <span>✉</span>
+            <span>Email De Crew</span>
+          </button>
+          <button class="quick-btn">
+            <span>🎟</span>
+            <span>Draw Giveaway Winner</span>
+          </button>
+          <button class="quick-btn">
+            <span>📊</span>
+            <span>Generate Investor Report</span>
+          </button>
+          <button class="quick-btn">
+            <span>📅</span>
+            <span>Schedule Next Batch</span>
+          </button>
+          <button class="quick-btn">
+            <span>⚙</span>
+            <span>Pricing Settings</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom band -->
+  <footer class="admin-foot mono">
+    <span>Demo Environment · No real customer data</span>
+    <span>v0.4.2 · Internal build</span>
+    <span><a href="index.html" class="text-fire">← Back to public site</a></span>
+  </footer>
+</main>
+
+<style>
+  /* Override site nav for admin */
+  .admin-body { padding: 0; }
+
+  .admin-body { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+  @media (max-width: 900px) { .admin-body { grid-template-columns: 1fr; } }
+
+  .admin-sidebar {
+    background: var(--bg-1);
+    border-right: 2px solid var(--pepper);
+    padding: var(--s-6) var(--s-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-7);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  @media (max-width: 900px) { .admin-sidebar { position: relative; height: auto; } }
+
+  .admin-brand {
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    color: var(--text);
+    text-shadow: 1px 1px 0 var(--pepper-deep);
+  }
+  .admin-brand-tag {
+    border: 2px solid var(--pepper);
+    color: var(--pepper);
+    padding: 2px 6px;
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
+
+  .admin-nav { display: flex; flex-direction: column; gap: var(--s-6); }
+  .admin-nav-group { display: flex; flex-direction: column; gap: 2px; }
+  .admin-nav-label {
+    color: var(--text-faint);
+    font-size: 0.65rem;
+    margin-bottom: var(--s-2);
+    padding-left: var(--s-3);
+    font-weight: 700;
+  }
+  .admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-3);
+    font-size: 0.875rem;
+    color: var(--text-soft);
+    border-radius: 0;
+    transition: all var(--dur-fast);
+    border-left: 3px solid transparent;
+  }
+  .admin-nav-item:hover { color: var(--text); background: var(--bg-2); }
+  .admin-nav-item.active { color: var(--pepper); border-left-color: var(--pepper); background: rgba(229, 29, 31, 0.06); font-weight: 600; }
+  .admin-nav-item .ic { width: 16px; text-align: center; opacity: 0.7; }
+
+  .admin-sidebar-foot { margin-top: auto; }
+  .admin-user {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-3);
+    border: 2px solid var(--border);
+  }
+  .admin-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--pepper);
+    color: var(--bone);
+    display: grid;
+    place-items: center;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+  }
+
+  /* MAIN */
+  .admin-main { padding: var(--s-6) var(--s-7); display: flex; flex-direction: column; gap: var(--s-6); min-width: 0; }
+
+  .admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-5);
+    flex-wrap: wrap;
+  }
+  .admin-topbar-actions { display: flex; align-items: center; gap: var(--s-4); }
+  .admin-search {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    background: var(--bg-1);
+    border: 2px solid var(--border);
+    padding: var(--s-3) var(--s-4);
+    min-width: 320px;
+  }
+  .admin-search input { flex: 1; outline: none; font-size: 0.875rem; }
+  .btn-icon {
+    background: var(--bg-1);
+    border: 2px solid var(--border);
+    padding: var(--s-3);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    top: -6px; right: -6px;
+    background: var(--pepper);
+    color: var(--bone);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    border-radius: 10px;
+  }
+
+  /* KPI Row */
+  .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4); }
+  @media (max-width: 1100px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .kpi-row { grid-template-columns: 1fr; } }
+  .kpi {
+    border: 2px solid var(--border);
+    background: var(--bg-1);
+    padding: var(--s-5);
+  }
+  .kpi-value {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-top: var(--s-3);
+    color: var(--text);
+  }
+  .kpi-of { color: var(--text-faint); font-size: 1.5rem; }
+  .kpi-bar {
+    margin-top: var(--s-4);
+    height: 6px;
+    background: var(--surface-2);
+    overflow: hidden;
+  }
+  .kpi-bar-fill { height: 100%; background: var(--pepper); }
+  .kpi-meta {
+    margin-top: var(--s-3);
+    font-size: var(--fs-mono);
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+  }
+  .trend-up { color: var(--pepper); }
+  .trend-down { color: var(--scotch); }
+
+  /* Admin Grid */
+  .admin-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--s-6); }
+  @media (max-width: 1100px) { .admin-grid { grid-template-columns: 1fr; } }
+  .admin-col { display: flex; flex-direction: column; gap: var(--s-6); }
+
+  .admin-card {
+    border: 2px solid var(--border);
+    background: var(--bg-1);
+    padding: var(--s-6);
+  }
+  .admin-card-fire {
+    border-color: var(--pepper);
+    background: linear-gradient(180deg, rgba(229, 29, 31, 0.05), var(--bg-1));
+    box-shadow: 4px 4px 0 var(--pepper-deep);
+  }
+  .admin-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s-4); margin-bottom: var(--s-5); flex-wrap: wrap; }
+  .admin-h3 { font-size: 1.5rem; line-height: 1; margin-top: 4px; text-transform: uppercase; }
+
+  .chip {
+    font-size: var(--fs-mono);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 2px solid var(--border-strong);
+    color: var(--text-dim);
+    font-weight: 700;
+  }
+  .chip-fire { border-color: var(--pepper); color: var(--pepper); }
+
+  /* Bar chart */
+  .bar-chart {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--s-3);
+    height: 180px;
+    padding-top: var(--s-4);
+    align-items: end;
+  }
+  .bar {
+    position: relative;
+    background: linear-gradient(180deg, var(--pepper), var(--pepper-deep));
+    height: var(--h);
+    min-height: 8px;
+    transition: opacity var(--dur);
+  }
+  .bar:hover { opacity: 0.85; }
+  .bar-active { background: var(--pepper); box-shadow: 0 0 24px var(--pepper-glow); }
+  .bar-projected { background: repeating-linear-gradient(45deg, var(--surface-2) 0 4px, var(--bg-2) 4px 8px); border: 1px solid var(--border-strong); }
+  .bar > span {
+    position: absolute;
+    bottom: -20px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .bar-legend {
+    display: flex;
+    gap: var(--s-5);
+    margin-top: var(--s-7);
+    font-size: var(--fs-mono);
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+  }
+  .bar-legend > span { display: flex; align-items: center; gap: var(--s-2); }
+  .dot { display: inline-block; width: 8px; height: 8px; }
+  .dot-fire { background: var(--pepper); }
+  .dot-faint { background: var(--surface-2); border: 1px solid var(--border-strong); }
+
+  /* Admin table */
+  .admin-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .admin-table thead th {
+    text-align: left;
+    padding: var(--s-3);
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--pepper);
+    font-weight: 700;
+  }
+  .admin-table tbody tr { border-bottom: 1px solid var(--border); transition: background var(--dur-fast); }
+  .admin-table tbody tr:hover { background: var(--bg-2); }
+  .admin-table td { padding: var(--s-4) var(--s-3); color: var(--text-soft); vertical-align: middle; }
+  .admin-table td strong { color: var(--text); }
+
+  .tier-pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid currentColor;
+    font-weight: 700;
+  }
+  .tier-pill-base { color: var(--text-dim); }
+  .tier-pill-plus { color: var(--scotch); }
+  .tier-pill-elite { color: var(--pepper); }
+
+  .dot-status {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-left: 14px;
+    position: relative;
+    font-weight: 600;
+  }
+  .dot-status::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--text-dim);
+  }
+  .dot-status-new { color: var(--pepper); }
+  .dot-status-new::before { background: var(--pepper); box-shadow: 0 0 0 4px rgba(229, 29, 31, 0.18); }
+
+  /* Tier mix */
+  .tier-mix { display: flex; flex-direction: column; gap: var(--s-5); }
+  .mix-row { display: grid; grid-template-columns: 220px 1fr 50px; gap: var(--s-4); align-items: center; }
+  @media (max-width: 700px) { .mix-row { grid-template-columns: 1fr; gap: var(--s-2); } }
+  .mix-label { display: flex; align-items: center; gap: var(--s-3); font-size: 0.875rem; color: var(--text-soft); }
+  .mix-bar { height: 10px; background: var(--surface-2); }
+  .mix-fill { height: 100%; }
+  .mix-fill-base { background: var(--text-dim); }
+  .mix-fill-plus { background: var(--scotch); }
+  .mix-fill-elite { background: var(--pepper); }
+  .mix-pct { color: var(--text); text-align: right; font-weight: 600; }
+
+  /* Schedule */
+  .schedule { display: flex; flex-direction: column; gap: var(--s-3); }
+  .schedule li { display: grid; grid-template-columns: 60px 1fr; gap: var(--s-4); padding: var(--s-3) 0; border-bottom: 1px solid var(--border); }
+  .schedule li:last-child { border-bottom: 0; }
+  .sched-time { color: var(--pepper); font-size: 0.875rem; padding-top: 4px; font-weight: 700; }
+
+  /* Giveaway */
+  .giveaway-stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); }
+  .conv-row { display: flex; justify-content: space-between; align-items: center; padding: var(--s-3) 0; border-bottom: 1px dashed var(--border); font-size: 0.875rem; }
+  .conv-row:last-of-type { border-bottom: 0; }
+
+  /* Quick actions */
+  .quick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+  .quick-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-4);
+    border: 2px solid var(--border);
+    background: var(--bg-2);
+    color: var(--text);
+    font-size: 0.8125rem;
+    text-align: left;
+    transition: all var(--dur-fast);
+  }
+  .quick-btn:hover { border-color: var(--pepper); color: var(--pepper); transform: translateY(-2px); }
+
+  /* Footer */
+  .admin-foot {
+    margin-top: var(--s-6);
+    padding: var(--s-5) 0;
+    border-top: 2px solid var(--pepper);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--s-4);
+    color: var(--text-faint);
+    font-size: var(--fs-mono);
+    letter-spacing: 0.18em;
+  }
+  .admin-foot a { color: var(--pepper); }
+</style>
+
+<script src="scripts/main.js" defer></script>
+</body>
+</html>

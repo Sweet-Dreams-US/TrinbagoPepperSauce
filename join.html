@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join De Crew — Trinbago Pepper Sauce</title>
+<meta name="description" content="Join De Pepper Crew. Get first dibs on limited drops, recipe newsletters, and 10% off your first bottle. Real heat, real recipes, real talk." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Caveat:wght@500;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/globals.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0707'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A0707' stroke='%23E51D1F' stroke-width='6'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Bungee,Impact' font-size='38' fill='%23E51D1F'%3ET%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">Trinbago</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">De Story</a>
+    <a href="experience.html" class="nav-link">Heat Scale</a>
+    <a href="pricing.html" class="nav-link">Bottles</a>
+    <a href="giveaway.html" class="nav-link">Giveaway</a>
+  </div>
+  <a href="join.html" class="nav-cta" aria-current="page">Join De Crew <span aria-hidden="true">→</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Split layout -->
+<main class="join-page">
+  <!-- LEFT — image + manifesto -->
+  <aside class="join-aside">
+    <div class="join-aside-bg">
+      <img src="assets/img/sauce-pour.png" alt="Trinbago pepper sauce being poured" />
+    </div>
+    <div class="join-aside-content">
+      <span class="eyebrow">— De Pepper Crew —</span>
+      <h1 class="display mt-4" style="font-size: clamp(3rem, 6vw, 5.5rem);">
+        Join <br />de <span class="text-pepper">crew.</span>
+      </h1>
+      <p class="lead mt-6 text-soft" style="max-width:none;">
+        Limited drops first. Recipe newsletter monthly. 10% off your first bottle. Stories from de kitchen, dispatches from de island, no spam — ever.
+      </p>
+      <div class="aside-stats mt-8">
+        <div>
+          <div class="display text-pepper" style="font-size: 4rem; line-height: 1;">2,847</div>
+          <div class="mono text-dim mt-2">Crew Members</div>
+        </div>
+        <div>
+          <div class="display" style="font-size: 4rem; line-height: 1;">10<span style="font-size:0.6em;">%</span></div>
+          <div class="mono text-dim mt-2">Off Yuh First Bottle</div>
+        </div>
+      </div>
+      <div class="aside-progress mt-6">
+        <div class="aside-progress-bar" style="--p: 95%;"></div>
+        <div class="mono text-faint mt-3">Free + always will be</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- RIGHT — form -->
+  <section class="join-form-wrap form-wrap">
+    <div style="max-width: 540px; width: 100%;">
+      <span class="eyebrow">/01 — Get In</span>
+      <h2 class="h-2 mt-4">Sign in.<br />Get yuh fire.</h2>
+      <p class="text-soft mt-4">No catch. We send a recipe + a drop alert about once a month. You'll know when de Carnival batch is ready before anyone else.</p>
+
+      <form class="join-form mt-8" data-demo>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="label" for="firstName">First Name</label>
+            <input class="input" type="text" id="firstName" name="firstName" required />
+          </div>
+          <div class="form-group">
+            <label class="label" for="lastName">Last Name</label>
+            <input class="input" type="text" id="lastName" name="lastName" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="email">Email</label>
+          <input class="input" type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="phone">Phone (for SMS drops)</label>
+          <input class="input" type="tel" id="phone" name="phone" placeholder="optional — only for limited drops" />
+        </div>
+
+        <div class="form-group">
+          <label class="label">Yuh favorite heat?</label>
+          <div class="tier-select">
+            <label class="tier-radio">
+              <input type="radio" name="tier" value="mild" />
+              <div>
+                <div class="tier-radio-name">ORIGINAL 🌶</div>
+                <div class="tier-radio-price">Mild · 30K SHU</div>
+              </div>
+            </label>
+            <label class="tier-radio">
+              <input type="radio" name="tier" value="hot" checked />
+              <div>
+                <div class="tier-radio-name">CARNIVAL 🌶🌶 <span class="text-scotch mono" style="font-size: 0.65rem;">★ Popular</span></div>
+                <div class="tier-radio-price">Hot · 120K SHU</div>
+              </div>
+            </label>
+            <label class="tier-radio">
+              <input type="radio" name="tier" value="inferno" />
+              <div>
+                <div class="tier-radio-name">SOCA INFERNO 🌶🌶🌶</div>
+                <div class="tier-radio-price">Inferno · 350K SHU</div>
+              </div>
+            </label>
+            <label class="tier-radio">
+              <input type="radio" name="tier" value="undecided" />
+              <div>
+                <div class="tier-radio-name">ALL OF DEM</div>
+                <div class="tier-radio-price">Surprise me</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="goal">How yuh planning to use it?</label>
+          <textarea class="textarea" id="goal" name="goal" rows="3" placeholder="Optional — jerk chicken, eggs, doubles, bloody mary..."></textarea>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="updates" checked />
+          <span>Send me drop alerts and recipes (max 1–2 per month).</span>
+        </label>
+
+        <button class="btn btn-primary btn-arrow mt-6" style="width:100%; justify-content:center;" type="submit">Join De Crew</button>
+
+        <p class="mono text-faint mt-4 center">Free · No spam · Unsubscribe anytime</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- Why this matters -->
+<section class="section" style="border-top: 2px solid var(--pepper);">
+  <div class="wrap">
+    <div data-reveal>
+      <span class="eyebrow">Why Join</span>
+      <h2 class="h-1 mt-4">Three reasons.<br /><span class="editorial text-scotch">All real.</span></h2>
+    </div>
+    <div class="grid grid-3 mt-8 reasons">
+      <div class="reason" data-reveal>
+        <div class="reason-num">/01</div>
+        <h3 class="h-3 mt-3">First dibs.</h3>
+        <p class="text-soft mt-4">Limited drops (Mango Bonnet, Reaper edition, Carnival 2026) hit Crew first. By de time we post on Instagram, regular folk are buying restocks.</p>
+      </div>
+      <div class="reason" data-reveal data-delay="1">
+        <div class="reason-num">/02</div>
+        <h3 class="h-3 mt-3">Real recipes.</h3>
+        <p class="text-soft mt-4">Not "10 ways to use hot sauce." Real Trini recipes from real kitchens. Doubles. Pelau. Fish broth. Black cake. Granny's stuff.</p>
+      </div>
+      <div class="reason" data-reveal data-delay="2">
+        <div class="reason-num">/03</div>
+        <h3 class="h-3 mt-3">10% off, locked.</h3>
+        <p class="text-soft mt-4">Discount code arrives in yuh first email. Use it whenever — first bottle, third bottle, holiday gift box. Yours forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">Trinbago<span class="text-pepper">.</span></div>
+    <div class="footer-grid mt-8">
+      <div class="footer-col"><h4>From</h4><p class="text-soft" style="line-height:1.6;">Port of Spain → Brooklyn<br />Trinidad &amp; Tobago<br /><span class="mono text-dim mt-3" style="display:inline-block;">Bottled with love since 2018</span></p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">De Story</a></li><li><a href="experience.html">Heat Scale</a></li><li><a href="pricing.html">Bottles</a></li><li><a href="giveaway.html">Giveaway</a></li></ul></div>
+      <div class="footer-col"><h4>Crew</h4><ul><li><a href="join.html">Join De Crew</a></li><li><a href="admin.html">Operator</a></li></ul></div>
+      <div class="footer-col"><h4>Follow</h4><ul><li><a href="https://instagram.com/trinbagopeppersauce" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:hello@trinbagopeppersauce.com">hello@trinbagopeppersauce.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> Trinbago Pepper Sauce™ &nbsp;·&nbsp; Estd 2018</span><span>Site by <a href="https://sweetdreamsmusic.com" target="_blank" rel="noopener">Sweet Dreams Studios</a></span></div>
+  </div>
+</footer>
+
+<style>
+  .join-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    padding-top: 80px;
+  }
+  @media (max-width: 900px) { .join-page { grid-template-columns: 1fr; } }
+
+  .join-aside {
+    position: relative;
+    overflow: hidden;
+    padding: var(--s-9) var(--gutter);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 600px;
+  }
+  .join-aside-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .join-aside-bg img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.15) brightness(0.4) saturate(1.05); }
+  .join-aside-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10,7,7,0.7) 0%, rgba(229,29,31,0.25) 100%);
+  }
+  .join-aside-content { position: relative; z-index: 1; max-width: 540px; }
+
+  .aside-stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6); }
+
+  .aside-progress {
+    height: 8px;
+    background: var(--surface-2);
+    position: relative;
+  }
+  .aside-progress-bar {
+    height: 100%;
+    width: var(--p, 95%);
+    background: var(--pepper);
+    box-shadow: 0 0 24px var(--pepper-glow);
+  }
+
+  .join-form-wrap {
+    padding: var(--s-9) var(--gutter);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .join-form { display: flex; flex-direction: column; gap: var(--s-6); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+  .tier-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-3);
+    margin-top: var(--s-3);
+  }
+  .tier-radio {
+    border: 2px solid var(--border);
+    padding: var(--s-4);
+    cursor: pointer;
+    transition: all var(--dur-fast);
+    position: relative;
+    background: var(--bg);
+  }
+  .tier-radio:hover { border-color: var(--border-strong); }
+  .tier-radio input { position: absolute; opacity: 0; pointer-events: none; }
+  .tier-radio:has(input:checked) { border-color: var(--pepper); background: rgba(229, 29, 31, 0.06); box-shadow: 3px 3px 0 var(--pepper-deep); }
+  .tier-radio-name {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .tier-radio-price {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  .form-success.show { animation: fadeUp 0.8s var(--ease-out) both; }
+
+  .reason {
+    border-left: 3px solid var(--pepper);
+    padding-left: var(--s-6);
+  }
+  .reason-num {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--pepper);
+    line-height: 1;
+  }
+</style>
+
+<script src="scripts/main.js" defer></script>
+</body>
+</html>

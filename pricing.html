@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>De Bottles — Trinbago Pepper Sauce</title>
+<meta name="description" content="Single bottles, 3-packs, and the Founders 6-Pack subscription. Free shipping over $40. Real Caribbean pepper sauce, delivered." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Caveat:wght@500;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/globals.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0707'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A0707' stroke='%23E51D1F' stroke-width='6'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Bungee,Impact' font-size='38' fill='%23E51D1F'%3ET%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">Trinbago</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">De Story</a>
+    <a href="experience.html" class="nav-link">Heat Scale</a>
+    <a href="pricing.html" class="nav-link" aria-current="page">Bottles</a>
+    <a href="giveaway.html" class="nav-link">Giveaway</a>
+  </div>
+  <a href="join.html" class="nav-cta">Join De Crew <span aria-hidden="true">→</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Page header -->
+<section class="page-header">
+  <div class="wrap">
+    <div class="grid-12">
+      <div style="grid-column: 1 / span 6;" data-reveal>
+        <span class="eyebrow">De Bottles</span>
+        <h1 class="display fade-up" style="font-size: clamp(3rem, 11vw, 10rem); margin-top: 1.5rem;">
+          Grab a<br /><span class="editorial text-scotch">bottle.</span>
+        </h1>
+      </div>
+      <div style="grid-column: 8 / -1; align-self:end;" data-reveal data-delay="2">
+        <p class="lead">Single bottles. Three-pack samplers. Or de Founders Subscription — six bottles a quarter, locked-in pricing, first dibs on every limited drop.</p>
+        <div class="founders-banner mt-6">
+          <div>
+            <div class="mono text-pepper">Free shipping on orders over $40</div>
+            <div class="text-soft mt-2">Lower 48. International shipping available at checkout.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing toggle -->
+<section class="section section-tight">
+  <div class="wrap" style="text-align:center;">
+    <div class="price-toggle" data-price-toggle>
+      <button class="active" data-mode="founders">One-Time</button>
+      <button data-mode="standard">Subscribe + Save 15%</button>
+    </div>
+    <p class="mono text-faint mt-4" data-price-mode>One-Time Order</p>
+  </div>
+</section>
+
+<!-- Tier Cards -->
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="grid grid-3 tiers">
+
+      <!-- SINGLE -->
+      <article class="tier" data-reveal>
+        <header class="tier-head">
+          <div class="mono text-dim">Tier 01</div>
+          <h2 class="display tier-name">Single</h2>
+          <p class="text-soft mt-3">Just one bottle. Pick yuh heat. Try it. See if it changes yuh life.</p>
+        </header>
+        <div class="tier-price-row">
+          <div class="tier-price">
+            <span class="dollar">$</span>
+            <span data-price data-price-founders="14" data-price-standard="12">14</span>
+          </div>
+          <div class="mono text-dim">/5oz bottle</div>
+        </div>
+        <a href="#" class="btn btn-arrow tier-cta">Add a Bottle</a>
+        <ul class="tier-features">
+          <li class="feat-yes">1 × 5oz bottle (yuh choice)</li>
+          <li class="feat-yes">Original · Carnival · Inferno</li>
+          <li class="feat-yes">Hand-bottled, batch stamped</li>
+          <li class="feat-yes">Ships in 2 business days</li>
+          <li class="feat-no">Multi-bottle savings</li>
+          <li class="feat-no">Free shipping (under $40)</li>
+          <li class="feat-no">Limited drop early access</li>
+          <li class="feat-no">Subscription discount</li>
+        </ul>
+      </article>
+
+      <!-- 3-PACK -->
+      <article class="tier tier-popular" data-reveal data-delay="1">
+        <div class="popular-tag">Best Seller</div>
+        <header class="tier-head">
+          <div class="mono" style="color: var(--scotch);">Tier 02</div>
+          <h2 class="display tier-name">Trio</h2>
+          <p class="text-soft mt-3">All three heats. One box. De full tour of de Trinbago lineup.</p>
+        </header>
+        <div class="tier-price-row">
+          <div class="tier-price">
+            <span class="dollar">$</span>
+            <span data-price data-price-founders="38" data-price-standard="32">38</span>
+          </div>
+          <div class="mono text-dim">/3 bottles</div>
+        </div>
+        <a href="#" class="btn btn-primary btn-arrow tier-cta">Get De Trio</a>
+        <ul class="tier-features">
+          <li class="feat-yes">3 × 5oz bottles</li>
+          <li class="feat-yes">1 × Original (mild)</li>
+          <li class="feat-yes">1 × Carnival (hot)</li>
+          <li class="feat-yes">1 × Soca Inferno (inferno)</li>
+          <li class="feat-yes">Free shipping included</li>
+          <li class="feat-yes">$4 off vs. singles</li>
+          <li class="feat-no">Subscription discount</li>
+          <li class="feat-no">Founders limited drops</li>
+        </ul>
+      </article>
+
+      <!-- 6-PACK SUBSCRIPTION -->
+      <article class="tier tier-elite" data-reveal data-delay="2">
+        <header class="tier-head">
+          <div class="mono text-dim">Tier 03 · Subscription</div>
+          <h2 class="display tier-name">Founders 6</h2>
+          <p class="text-soft mt-3">Six bottles every quarter. Cancel anytime. First in line for limited drops.</p>
+        </header>
+        <div class="tier-price-row">
+          <div class="tier-price">
+            <span class="dollar">$</span>
+            <span data-price data-price-founders="68" data-price-standard="58">68</span>
+          </div>
+          <div class="mono text-dim">/quarter</div>
+        </div>
+        <a href="#" class="btn btn-pepper btn-arrow tier-cta">Subscribe Now</a>
+        <ul class="tier-features">
+          <li class="feat-yes">6 × 5oz bottles every 90 days</li>
+          <li class="feat-yes">2 × Original · 2 × Carnival · 2 × Inferno</li>
+          <li class="feat-yes">15% off vs. one-time</li>
+          <li class="feat-yes">Free shipping always</li>
+          <li class="feat-yes">First dibs on limited drops</li>
+          <li class="feat-yes">Crew newsletter (recipes + drops)</li>
+          <li class="feat-yes">10% off any extra add-ons</li>
+          <li class="feat-yes-gold">Name in de Founders Crew</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Why Subscribe -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-12">
+      <div style="grid-column: 1 / span 5;" data-reveal>
+        <span class="eyebrow">Why Subscribe</span>
+        <h2 class="h-1 mt-4">Founders <br /><span class="editorial text-scotch">eat first.</span></h2>
+      </div>
+      <div style="grid-column: 7 / -1;">
+        <p class="lead" data-reveal>
+          Small batch means we run out fast. Subscribers get first crack at every drop, every limited collab, every seasonal pepper experiment. No fighting for restocks. No "back in stock" emails you missed.
+        </p>
+        <div class="grid grid-2 mt-8">
+          <div class="founder-perk" data-reveal>
+            <div class="mono text-pepper">/01</div>
+            <h4 class="h-4 mt-3">Always 15% off</h4>
+            <p class="text-soft mt-3">Every quarterly box, every add-on, every limited drop you opt into. Locked in for life of subscription.</p>
+          </div>
+          <div class="founder-perk" data-reveal data-delay="1">
+            <div class="mono text-pepper">/02</div>
+            <h4 class="h-4 mt-3">First in line</h4>
+            <p class="text-soft mt-3">Limited drops (Carnival edition, Reaper edition, Mango Bonnet) ship to subscribers first. By de time it's public, you already have yours.</p>
+          </div>
+          <div class="founder-perk" data-reveal data-delay="2">
+            <div class="mono text-pepper">/03</div>
+            <h4 class="h-4 mt-3">Crew Newsletter</h4>
+            <p class="text-soft mt-3">Recipes, kitchen videos, behind-de-scenes from each batch. Granny stories included.</p>
+          </div>
+          <div class="founder-perk" data-reveal data-delay="3">
+            <div class="mono text-pepper">/04</div>
+            <h4 class="h-4 mt-3">Yuh name on de bottle</h4>
+            <p class="text-soft mt-3">Founders Crew members get their name printed on de bottom of every bottle. Real founder energy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="section" style="background: var(--bg-1); border-block: 2px solid var(--pepper);">
+  <div class="wrap">
+    <div data-reveal>
+      <span class="eyebrow">Compare</span>
+      <h2 class="h-1 mt-4">All de details.<br /><span class="editorial text-scotch">Side by side.</span></h2>
+    </div>
+
+    <div class="compare-wrap mt-8">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span class="mono text-dim">Tier 01</span><br /><span class="display">Single</span></th>
+            <th class="popular-th"><span class="mono" style="color: var(--scotch);">Tier 02 ★</span><br /><span class="display">Trio</span></th>
+            <th><span class="mono text-dim">Tier 03</span><br /><span class="display">Founders 6</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th colspan="4" class="row-section">Bottles</th></tr>
+          <tr><td>Bottle count</td><td>1</td><td>3</td><td>6 / quarter</td></tr>
+          <tr><td>Choose your heats</td><td>Yes</td><td>Pre-set</td><td>Pre-set, customizable</td></tr>
+          <tr><td>5oz artisan glass</td><td>✓</td><td>✓</td><td>✓</td></tr>
+
+          <tr><th colspan="4" class="row-section">Pricing</th></tr>
+          <tr><td>Per-bottle cost</td><td>$14</td><td>$12.66</td><td>$9.66</td></tr>
+          <tr><td>Subscription savings</td><td>—</td><td>—</td><td>15%</td></tr>
+          <tr><td>Free shipping</td><td>$40+</td><td>✓ included</td><td>✓ always</td></tr>
+
+          <tr><th colspan="4" class="row-section">Crew Perks</th></tr>
+          <tr><td>Limited drop early access</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Crew Newsletter</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Add-on discount</td><td>—</td><td>—</td><td>10%</td></tr>
+          <tr><td>Name on bottle bottom</td><td>—</td><td>—</td><td>★</td></tr>
+
+          <tr><th colspan="4" class="row-section">Flexibility</th></tr>
+          <tr><td>Cancel anytime</td><td>n/a</td><td>n/a</td><td>✓</td></tr>
+          <tr><td>Skip a quarter</td><td>n/a</td><td>n/a</td><td>✓</td></tr>
+          <tr><td>Swap heats per box</td><td>n/a</td><td>—</td><td>✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Questions</span>
+    <h2 class="h-1 mt-4" data-reveal data-delay="1">De fine print.</h2>
+
+    <div class="faq mt-8">
+      <details class="faq-item" data-reveal>
+        <summary>How hot is "Inferno" really?</summary>
+        <p>Around 350,000 Scoville units. For comparison: Sriracha is ~2,500. Tabasco is ~3,000. A standard ghost pepper is ~1 million. We blend ghost pepper with scotch bonnet so you get heat with flavor — not just chemical burn. Use a drop, not a dollop. Wash yuh hands after.</p>
+      </details>
+      <details class="faq-item" data-reveal data-delay="1">
+        <summary>How long do bottles last after opening?</summary>
+        <p>Best within 90 days of opening when refrigerated. Sealed bottles last 18 months in a cool dark place. Real food, real shelf life — like grandma made.</p>
+      </details>
+      <details class="faq-item" data-reveal data-delay="2">
+        <summary>Can I cancel my subscription?</summary>
+        <p>Anytime. No fees, no hassle. Skip a quarter, swap your heat selection, or cancel — all from your account dashboard. Real talk: we'd rather you pause than cancel and regret it.</p>
+      </details>
+      <details class="faq-item" data-reveal data-delay="3">
+        <summary>Where do you ship?</summary>
+        <p>Free shipping anywhere in de lower 48. International shipping available at checkout — Canada, UK, Caribbean, Europe. Currently we don't ship to Australia (working on it).</p>
+      </details>
+      <details class="faq-item" data-reveal data-delay="4">
+        <summary>Are these gluten-free / vegan / sugar-free?</summary>
+        <p>Gluten-free: yes. Vegan: yes. Sugar-free: nope — we use a tiny pinch of raw cane sugar to round out the heat. About 1g per teaspoon serving. Diabetic-friendly portions, but we won't lie and say zero sugar.</p>
+      </details>
+      <details class="faq-item" data-reveal data-delay="5">
+        <summary>Do you do bulk / wholesale?</summary>
+        <p>Yes — for restaurants, retailers, and gift shops. Email <a href="mailto:wholesale@trinbagopeppersauce.com" class="text-pepper">wholesale@trinbagopeppersauce.com</a> with what you're thinking. Minimum 24 bottles to start.</p>
+      </details>
+      <details class="faq-item" data-reveal data-delay="5">
+        <summary>What if I get a bottle and don't like it?</summary>
+        <p>Hit us back. We'll send you a different heat level on us — or refund de full bottle. Real recipes ain't for everyone. We respect that.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section center" style="position:relative;">
+  <div style="position:absolute; inset:0; background: radial-gradient(ellipse at center, var(--pepper-glow), transparent 60%); filter: blur(60px); pointer-events:none;"></div>
+  <div class="wrap" style="position:relative;">
+    <h2 class="h-mega" data-reveal>Bring it<br /><span class="editorial text-scotch">home.</span></h2>
+    <p class="lead mt-6" style="margin-inline:auto;" data-reveal data-delay="1">
+      Free shipping over $40. Try de Trio. We'll see yuh on Founders next.
+    </p>
+    <div class="mt-8 flex gap-4" style="justify-content:center; flex-wrap:wrap;" data-reveal data-delay="2">
+      <a href="#" class="btn btn-primary btn-arrow">Order De Trio</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">Trinbago<span class="text-pepper">.</span></div>
+    <div class="footer-grid mt-8">
+      <div class="footer-col"><h4>From</h4><p class="text-soft" style="line-height:1.6;">Port of Spain → Brooklyn<br />Trinidad &amp; Tobago<br /><span class="mono text-dim mt-3" style="display:inline-block;">Bottled with love since 2018</span></p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">De Story</a></li><li><a href="experience.html">Heat Scale</a></li><li><a href="pricing.html">Bottles</a></li><li><a href="giveaway.html">Giveaway</a></li></ul></div>
+      <div class="footer-col"><h4>Crew</h4><ul><li><a href="join.html">Join De Crew</a></li><li><a href="admin.html">Operator</a></li></ul></div>
+      <div class="footer-col"><h4>Follow</h4><ul><li><a href="https://instagram.com/trinbagopeppersauce" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:hello@trinbagopeppersauce.com">hello@trinbagopeppersauce.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> Trinbago Pepper Sauce™ &nbsp;·&nbsp; Estd 2018</span><span>Site by <a href="https://sweetdreamsmusic.com" target="_blank" rel="noopener">Sweet Dreams Studios</a></span></div>
+  </div>
+</footer>
+
+<style>
+  .founders-banner {
+    border: 2px solid var(--pepper);
+    background: linear-gradient(135deg, rgba(229, 29, 31, 0.08), transparent);
+    padding: var(--s-5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-5);
+  }
+
+  .price-toggle {
+    display: inline-flex;
+    border: 2px solid var(--pepper);
+    padding: 4px;
+    background: var(--bg-1);
+  }
+  .price-toggle button {
+    padding: 0.7rem 1.4rem;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--dur-fast);
+  }
+  .price-toggle button.active { background: var(--pepper); color: var(--bone); }
+
+  .tiers { gap: var(--s-5); }
+  .tier {
+    border: 2px solid var(--border);
+    background: var(--bg);
+    padding: var(--s-7);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-6);
+    position: relative;
+    transition: all var(--dur);
+  }
+  .tier:hover { transform: translateY(-6px); border-color: var(--pepper); box-shadow: 6px 6px 0 var(--pepper-deep); }
+  .tier-popular {
+    border-color: var(--scotch);
+    background: linear-gradient(180deg, rgba(255, 184, 0, 0.04), var(--bg));
+    box-shadow: 4px 4px 0 var(--scotch-deep);
+  }
+  .tier-popular:hover { box-shadow: 8px 8px 0 var(--scotch-deep); border-color: var(--scotch); }
+  .tier-elite {
+    border-color: var(--pepper);
+    background: linear-gradient(180deg, rgba(229, 29, 31, 0.04), var(--bg));
+    box-shadow: 4px 4px 0 var(--pepper-deep);
+  }
+  .popular-tag {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: var(--scotch);
+    color: var(--bg);
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    padding: 6px 12px;
+    text-transform: uppercase;
+  }
+  .tier-head { border-bottom: 2px solid var(--border); padding-bottom: var(--s-5); }
+  .tier-name { font-size: clamp(2.5rem, 4vw, 3.5rem); margin-top: var(--s-3); }
+  .tier-price-row { display: flex; align-items: baseline; gap: var(--s-3); }
+  .tier-price {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 7vw, 6rem);
+    line-height: 0.9;
+    color: var(--pepper);
+    display: flex;
+    align-items: flex-start;
+  }
+  .tier-price .dollar {
+    font-size: 0.45em;
+    margin-top: 0.4em;
+    color: var(--text-dim);
+    margin-right: 4px;
+  }
+  .tier-cta { width: 100%; justify-content: center; }
+  .tier-features { display: flex; flex-direction: column; gap: var(--s-3); border-top: 1px solid var(--border); padding-top: var(--s-5); margin-top: auto; }
+  .tier-features li {
+    font-size: var(--fs-sm);
+    color: var(--text-soft);
+    padding-left: var(--s-5);
+    position: relative;
+    line-height: 1.5;
+  }
+  .tier-features li::before {
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+  .feat-yes::before { content: '✦'; color: var(--pepper); }
+  .feat-yes-gold::before { content: '★'; color: var(--scotch); }
+  .feat-yes-gold { color: var(--scotch) !important; }
+  .feat-no::before { content: '–'; color: var(--text-faint); }
+  .feat-no { color: var(--text-faint); text-decoration: line-through; }
+
+  .founder-perk {
+    border-left: 3px solid var(--pepper);
+    padding: var(--s-5);
+    padding-left: var(--s-6);
+    background: var(--bg-1);
+  }
+
+  .compare-wrap { overflow-x: auto; }
+  .compare {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--pepper);
+  }
+  .compare th, .compare td {
+    padding: var(--s-4) var(--s-5);
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    font-size: var(--fs-sm);
+  }
+  .compare th:last-child, .compare td:last-child { border-right: 0; }
+  .compare thead th {
+    padding: var(--s-6) var(--s-5);
+    background: var(--bg-2);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .compare thead th .display { font-size: 2rem; display: block; margin-top: 4px; }
+  .compare .popular-th { background: linear-gradient(180deg, rgba(255, 184, 0, 0.06), var(--bg-2)); }
+  .compare tbody th {
+    background: var(--pepper);
+    color: var(--bone);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .compare td:first-child { color: var(--text-soft); }
+  .compare td:not(:first-child) {
+    text-align: center;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+  }
+
+  .faq { display: flex; flex-direction: column; gap: var(--s-2); }
+  .faq-item {
+    border: 2px solid var(--border);
+    background: var(--bg);
+    transition: border-color var(--dur);
+  }
+  .faq-item:hover { border-color: var(--border-strong); }
+  .faq-item[open] { border-color: var(--pepper); background: var(--bg-1); }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--s-5) var(--s-6);
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    text-transform: uppercase;
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-5);
+    line-height: 1.2;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--pepper);
+    transition: transform var(--dur);
+  }
+  .faq-item[open] summary::after { content: '–'; }
+  .faq-item p {
+    padding: 0 var(--s-6) var(--s-6);
+    color: var(--text-soft);
+    max-width: 75ch;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) {
+    .founders-banner { flex-direction: column; align-items: flex-start; }
+    .grid-12 > div { grid-column: 1 / -1 !important; }
+  }
+</style>
+
+<script src="scripts/main.js" defer></script>
+</body>
+</html>
