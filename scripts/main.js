@@ -176,17 +176,17 @@
 
       const eyebrow = document.createElement('span');
       eyebrow.className = 'mono text-pepper';
-      eyebrow.textContent = '— Yuh in! —';
+      eyebrow.textContent = '— You\'re in! —';
       successEl.appendChild(eyebrow);
 
       const heading = document.createElement('h3');
       heading.className = 'h-2 mt-4';
-      heading.textContent = "Welcome to De Crew.";
+      heading.textContent = "Entry confirmed.";
       successEl.appendChild(heading);
 
       const lead = document.createElement('p');
       lead.className = 'lead mt-4';
-      lead.textContent = "Check yuh inbox for de 10% off code + first drop alert. We don't spam, we just bring de heat.";
+      lead.textContent = "Check your inbox for the 10% off code + drop alerts. We don't spam — just bring the fire.";
       successEl.appendChild(lead);
 
       wrap.appendChild(successEl);

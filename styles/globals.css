@@ -361,48 +361,65 @@ h1, h2, h3, h4 { font-weight: 400; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 1.1rem 1.6rem;
-  border: 2px solid currentColor;
+  border: 2px solid var(--text);
   background: transparent;
   color: var(--text);
   position: relative;
   overflow: hidden;
-  transition: all var(--dur) var(--ease-out);
+  transition: background var(--dur) var(--ease-out),
+              color var(--dur) var(--ease-out),
+              border-color var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out),
+              transform var(--dur) var(--ease-out);
   cursor: pointer;
   white-space: nowrap;
 }
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: currentColor;
-  transform: translateY(101%);
-  transition: transform var(--dur) var(--ease-out);
-  z-index: -1;
+.btn:hover {
+  background: var(--text);
+  color: var(--bg);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--pepper-deep);
 }
-.btn:hover { color: var(--bg); transform: translate(-2px, -2px); }
-.btn:hover::before { transform: translateY(0); }
 
-.btn-fire, .btn-pepper { color: var(--pepper); border-color: var(--pepper); }
-.btn-fire:hover, .btn-pepper:hover { color: var(--bone); }
-.btn-fire::before, .btn-pepper::before { background: var(--pepper); }
+/* Pepper outlined button: red border, red text, hover fills red */
+.btn-fire, .btn-pepper {
+  color: var(--pepper);
+  border-color: var(--pepper);
+}
+.btn-fire:hover, .btn-pepper:hover {
+  background: var(--pepper);
+  color: var(--bone);
+  border-color: var(--pepper);
+  box-shadow: 4px 4px 0 var(--pepper-deep);
+}
 
+/* Primary solid red button */
 .btn-primary {
   color: var(--bone);
   background: var(--pepper);
   border-color: var(--pepper);
   box-shadow: 4px 4px 0 var(--pepper-deep);
 }
-.btn-primary::before { background: var(--bone); }
-.btn-primary:hover { color: var(--pepper); border-color: var(--pepper); box-shadow: 6px 6px 0 var(--pepper-deep); }
+.btn-primary:hover {
+  background: var(--bone);
+  color: var(--pepper);
+  border-color: var(--pepper);
+  box-shadow: 6px 6px 0 var(--pepper-deep);
+}
 
+/* Scotch yellow button */
 .btn-scotch {
   color: var(--bg);
   background: var(--scotch);
   border-color: var(--scotch);
   box-shadow: 4px 4px 0 var(--scotch-deep);
 }
-.btn-scotch::before { background: var(--bg); }
-.btn-scotch:hover { color: var(--scotch); box-shadow: 6px 6px 0 var(--scotch-deep); }
+.btn-scotch:hover {
+  background: var(--bg);
+  color: var(--scotch);
+  border-color: var(--scotch);
+  box-shadow: 6px 6px 0 var(--scotch-deep);
+}
 
 .btn-arrow::after {
   content: '→';
@@ -1047,25 +1064,8 @@ h1, h2, h3, h4 { font-weight: 400; }
   z-index: -1;
 }
 
-/* ---------- Drip-bottom effect for big CTAs (SVG, no overflow tricks) ---------- */
-.btn-drip {
-  position: relative;
-}
-.btn-drip::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 12px;
-  background-color: var(--pepper);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M0 0 L200 0 L200 2 C190 11 178 4 168 9 C158 12 148 3 138 8 C128 11 118 5 108 10 C98 4 88 12 78 7 C68 11 58 4 48 9 C38 12 28 5 18 10 C8 4 4 7 0 6 Z' fill='black'/></svg>") center/100% 100% no-repeat;
-          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M0 0 L200 0 L200 2 C190 11 178 4 168 9 C158 12 148 3 138 8 C128 11 118 5 108 10 C98 4 88 12 78 7 C68 11 58 4 48 9 C38 12 28 5 18 10 C8 4 4 7 0 6 Z' fill='black'/></svg>") center/100% 100% no-repeat;
-  pointer-events: none;
-  filter: drop-shadow(0 2px 0 var(--pepper-deep));
-}
-.btn-primary.btn-drip::after { background-color: var(--pepper); }
-.btn-pepper.btn-drip::after { background-color: var(--pepper); }
+/* btn-drip class kept as no-op so existing markup doesn't break */
+.btn-drip { /* intentionally empty — drip experiment removed */ }
 
 /* ---------- Pepper trail cursor (hover hint) ---------- */
 .pepper-cursor, .pepper-cursor a, .pepper-cursor button {
