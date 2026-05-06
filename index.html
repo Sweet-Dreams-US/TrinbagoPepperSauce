@@ -381,11 +381,43 @@
   .hero-photo-text .hero-ctas { margin-top: var(--s-7); }
 
   @media (max-width: 900px) {
-    .hero-photo { padding-top: 5rem; }
-    .hero-photo-bg img { object-position: center center; }
-    .hero-photo-overlay { background: linear-gradient(180deg, rgba(10,7,7,0.50) 0%, rgba(10,7,7,0.65) 50%, rgba(10,7,7,0.95) 100%); }
-    .hero-photo-wrap { grid-template-columns: 1fr; }
-    .hero-photo-text { grid-column: 1; justify-self: start; }
+    /* Stack the bottle photo on top of the text on mobile so the bottle
+       actually fits the frame instead of being cropped by full-bleed cover. */
+    .hero-photo {
+      display: block;
+      min-height: auto;
+      padding-top: 4.5rem;
+      padding-bottom: var(--s-7);
+      background: var(--bg);
+    }
+    .hero-photo-bg {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      height: 48vh;
+      min-height: 300px;
+      max-height: 460px;
+    }
+    .hero-photo-bg img {
+      object-position: 35% center;
+    }
+    .hero-photo-overlay {
+      background: linear-gradient(180deg, rgba(10,7,7,0.05) 0%, rgba(10,7,7,0.15) 50%, var(--bg) 100%);
+    }
+    .hero-photo-wrap {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding-top: var(--s-6);
+    }
+    .hero-photo-text {
+      grid-column: 1;
+      justify-self: stretch;
+      max-width: none;
+      padding-left: 0;
+    }
+    .hero-photo-text .hero-title { font-size: clamp(3rem, 13vw, 5.5rem); }
+    .hero-photo-text .hero-title .line-2 { transform: rotate(0.5deg) translateX(20px); }
+    .hero-photo-text .hero-title .line-4.script-shout { transform: rotate(-2deg) translateX(10px); text-shadow: 3px 3px 0 var(--pepper-deep), 5px 5px 0 var(--bg); }
   }
 
   /* Ribbon row centering */

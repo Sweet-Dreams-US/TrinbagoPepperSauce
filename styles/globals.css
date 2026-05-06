@@ -339,9 +339,23 @@ h1, h2, h3, h4 { font-weight: 400; }
 
 .nav-toggle { display: none; }
 @media (max-width: 800px) {
-  .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--bg); flex-direction: column; padding: var(--s-8) var(--gutter); justify-content: flex-start; gap: var(--s-6); border-top: 1px solid var(--border); }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0; right: 0; bottom: 0;
+    background: #0A0707; /* opaque, never let the grain overlay or page bleed through */
+    z-index: 110; /* above body::before grain (z-index 100) */
+    flex-direction: column;
+    padding: var(--s-8) var(--gutter);
+    justify-content: flex-start;
+    gap: var(--s-6);
+    border-top: 3px solid var(--pepper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  }
   .nav-links.open { display: flex; }
-  .nav-link { font-size: 2rem; font-family: var(--font-display); letter-spacing: 0; }
+  .nav-link { font-size: 2rem; font-family: var(--font-display); letter-spacing: 0; color: var(--bone); }
+  .nav-link[aria-current="page"] { color: var(--pepper); }
   .nav-link::after { display: none; }
   .nav-toggle { display: flex; flex-direction: column; gap: 5px; padding: 8px; }
   .nav-toggle span { width: 24px; height: 2px; background: var(--text); transition: all var(--dur-fast); }
@@ -349,6 +363,14 @@ h1, h2, h3, h4 { font-weight: 400; }
   .nav-toggle.open span:nth-child(2) { opacity: 0; }
   .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .nav-cta { display: none; }
+  /* When the mobile menu is open, force the top nav bar to look "scrolled" (solid)
+     so the hamburger area isn't transparent over the page. */
+  .nav:has(.nav-links.open) {
+    background: rgba(10, 7, 7, 0.96);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom-color: var(--pepper);
+  }
 }
 
 /* ---------- Buttons ---------- */
