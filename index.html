@@ -563,15 +563,15 @@
     z-index: 2;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: var(--gutter);
     align-items: center;
     min-height: calc(100svh - 8rem);
   }
   .hero-photo-text {
     grid-column: 2;
-    max-width: 580px;
-    justify-self: end;
+    max-width: 640px;
+    padding-left: clamp(0rem, 3vw, 3rem);
   }
   .hero-photo-text .hero-title {
     font-size: clamp(3.5rem, 10vw, 9rem);

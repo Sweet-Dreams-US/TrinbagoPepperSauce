@@ -964,17 +964,17 @@ h1, h2, h3, h4 { font-weight: 400; }
   position: fixed;
   bottom: var(--s-6);
   right: var(--s-6);
-  width: 96px;
-  height: 96px;
+  width: 154px;
+  height: 154px;
   z-index: 40;
   cursor: pointer;
-  filter: drop-shadow(0 4px 16px var(--pepper-glow));
+  filter: drop-shadow(0 6px 22px var(--pepper-glow));
   animation: spinSlow 20s linear infinite;
   transition: transform var(--dur) var(--ease-bounce);
 }
 .floating-brand:hover {
   animation-play-state: paused;
-  transform: scale(1.15);
+  transform: scale(1.12);
 }
 .floating-brand img {
   width: 100%;
@@ -987,7 +987,7 @@ h1, h2, h3, h4 { font-weight: 400; }
   to { transform: rotate(360deg); }
 }
 @media (max-width: 600px) {
-  .floating-brand { width: 64px; height: 64px; bottom: var(--s-4); right: var(--s-4); }
+  .floating-brand { width: 102px; height: 102px; bottom: var(--s-4); right: var(--s-4); }
 }
 
 /* ---------- Bottle showcase — 3D hover tilt ---------- */
@@ -1047,29 +1047,25 @@ h1, h2, h3, h4 { font-weight: 400; }
   z-index: -1;
 }
 
-/* ---------- Drip-bottom effect for big CTAs ---------- */
+/* ---------- Drip-bottom effect for big CTAs (SVG, no overflow tricks) ---------- */
 .btn-drip {
   position: relative;
-  overflow: visible;
 }
 .btn-drip::after {
   content: '';
   position: absolute;
-  bottom: -8px;
-  left: 0; right: 0;
-  height: 14px;
-  background:
-    radial-gradient(circle at 12% 0, currentColor 0 5px, transparent 5px),
-    radial-gradient(circle at 30% 0, currentColor 0 7px, transparent 7px),
-    radial-gradient(circle at 50% 0, currentColor 0 4px, transparent 4px),
-    radial-gradient(circle at 70% 0, currentColor 0 6px, transparent 6px),
-    radial-gradient(circle at 88% 0, currentColor 0 5px, transparent 5px);
-  background-size: 100% 14px;
-  background-repeat: no-repeat;
-  background-position: 0 -10px;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background-color: var(--pepper);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M0 0 L200 0 L200 2 C190 11 178 4 168 9 C158 12 148 3 138 8 C128 11 118 5 108 10 C98 4 88 12 78 7 C68 11 58 4 48 9 C38 12 28 5 18 10 C8 4 4 7 0 6 Z' fill='black'/></svg>") center/100% 100% no-repeat;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M0 0 L200 0 L200 2 C190 11 178 4 168 9 C158 12 148 3 138 8 C128 11 118 5 108 10 C98 4 88 12 78 7 C68 11 58 4 48 9 C38 12 28 5 18 10 C8 4 4 7 0 6 Z' fill='black'/></svg>") center/100% 100% no-repeat;
   pointer-events: none;
-  opacity: 0.85;
+  filter: drop-shadow(0 2px 0 var(--pepper-deep));
 }
+.btn-primary.btn-drip::after { background-color: var(--pepper); }
+.btn-pepper.btn-drip::after { background-color: var(--pepper); }
 
 /* ---------- Pepper trail cursor (hover hint) ---------- */
 .pepper-cursor, .pepper-cursor a, .pepper-cursor button {
