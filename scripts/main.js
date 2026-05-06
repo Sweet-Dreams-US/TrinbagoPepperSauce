@@ -77,7 +77,7 @@
     counters.forEach(c => ic.observe(c));
   }
 
-  // ---------- Hero parallax (background scrolls slower than content) ----------
+  // ---------- Hero parallax (legacy .hero-image — keeps working on inner pages) ----------
   const heroImage = document.querySelector('.hero-image img');
   if (heroImage && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     let ticking = false;
@@ -96,6 +96,34 @@
         ticking = true;
       }
     }, { passive: true });
+  }
+
+  // ---------- Hero photo: subtle scroll-zoom + opacity fade ----------
+  const heroPhotoBg = document.getElementById('heroPhotoBg');
+  const heroPhoto = document.getElementById('heroPhoto');
+  if (heroPhotoBg && heroPhoto && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let ticking = false;
+    const updateHero = () => {
+      const rect = heroPhoto.getBoundingClientRect();
+      const heroHeight = heroPhoto.offsetHeight;
+      // progress: 0 when hero fully in view at top, 1 when fully scrolled past
+      const scrolled = Math.max(0, -rect.top);
+      const progress = Math.min(scrolled / heroHeight, 1);
+
+      // subtle zoom 1.0 → 1.18, opacity 1.0 → 0.15
+      const scale = 1 + progress * 0.18;
+      const opacity = 1 - progress * 0.85;
+      heroPhotoBg.style.transform = `scale(${scale})`;
+      heroPhotoBg.style.opacity = opacity.toFixed(3);
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateHero);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHero();
   }
 
   // ---------- Scroll progress bar (top of page) ----------

@@ -37,42 +37,30 @@
   </button>
 </nav>
 
-<!-- HERO — sticker-pack collage with logo + bottle as dual centerpiece -->
-<header class="hero hero-collage">
-  <div class="collage-grain"></div>
+<!-- HERO — full-bleed bottle photography, text on the right, scroll-zoom-fade -->
+<header class="hero hero-photo" id="heroPhoto">
+  <div class="hero-photo-bg" id="heroPhotoBg">
+    <img src="assets/img/hero-bottle.png" alt="Trinbago Pepper Sauce bottle on rustic table with peppers" id="heroPhotoImg" />
+    <div class="hero-photo-overlay"></div>
+  </div>
 
-  <div class="wrap collage-wrap">
-    <!-- Left: typography stack -->
-    <div class="collage-text">
-      <div class="stamp fade-up" style="animation-delay:0.1s;">★ Estd 2018 · Trinidad &amp; Tobago ★</div>
-      <h1 class="display fade-up" style="animation-delay:0.3s;">
+  <div class="wrap hero-photo-wrap">
+    <!-- Text on the right side, beside the bottle in the photo -->
+    <div class="hero-photo-text">
+      <div class="stamp fade-up" style="animation-delay:0.15s;">★ Estd 2018 · Fort Wayne, IN ★</div>
+      <h1 class="display fade-up hero-title" style="animation-delay:0.3s;">
         <span class="line line-1">Bring</span>
         <span class="line line-2">de</span>
         <span class="line line-3 text-pepper">Trini</span>
         <span class="line line-4 script-shout">Heat.</span>
       </h1>
-      <p class="lead fade-up" style="animation-delay:0.7s; margin-top: var(--s-6);">
-        Small-batch pepper sauce. Grandma recipe from Port of Spain. Scotch bonnet, habanero, ghost pepper — slow simmered, hand bottled, shipped from de island to your shelf.
+      <p class="lead fade-up hero-lead" style="animation-delay:0.7s;">
+        Small-batch Caribbean pepper sauce. Family recipe from Trinidad &amp; Tobago, hand-bottled in Fort Wayne. Scotch bonnet, habanero, shado beni — real fire, real flavor, real Trini.
       </p>
-      <div class="fade-up flex gap-4" style="animation-delay:0.9s; margin-top: var(--s-7); flex-wrap:wrap;">
+      <div class="fade-up flex gap-4 hero-ctas" style="animation-delay:0.9s; flex-wrap:wrap;">
         <a href="pricing.html" class="btn btn-primary btn-arrow btn-drip">Grab a Bottle</a>
         <a href="experience.html" class="btn btn-arrow">See De Heat Scale</a>
       </div>
-    </div>
-
-    <!-- Right: the bottle, prominent -->
-    <div class="collage-bottle fade-up" style="animation-delay:0.5s;">
-      <div class="bottle-mount">
-        <img src="assets/img/saucebottle.png" alt="Trinbago Pepper Sauce bottle" />
-      </div>
-      <!-- Floating logo overlay -->
-      <div class="collage-logo">
-        <img src="assets/img/Logo.png" alt="Trinbago Pepper Sauce official logo" />
-      </div>
-      <!-- Floating sticker accents -->
-      <div class="collage-sticker collage-sticker-1">★ Real<br />Peppa</div>
-      <div class="collage-sticker collage-sticker-2">100%<br />Trini</div>
-      <div class="collage-sticker collage-sticker-3">No<br />Joke</div>
     </div>
   </div>
 
@@ -294,6 +282,46 @@
   </div>
 </section>
 
+<!-- FOOD SPREAD — show the bottle in real Caribbean food context -->
+<section class="section food-section" style="background: var(--bg);">
+  <div class="wrap">
+    <div class="grid-12" style="align-items:center;">
+      <div style="grid-column: 1 / span 6;" data-reveal>
+        <div class="food-frame">
+          <img src="assets/img/food-spread.png" alt="Trinbago bottle on a Caribbean food spread — jerk chicken, doubles, plantains, roti, rice and peas" />
+          <div class="food-tape food-tape-1">★ Sunday Cookout ★</div>
+          <div class="food-tape food-tape-2">Doubles · Roti · Jerk</div>
+        </div>
+      </div>
+      <div style="grid-column: 8 / -1;">
+        <div class="ribbon-row" style="justify-content: flex-start;" data-reveal>
+          <div class="ribbon"><span class="star">★</span> On Every Plate <span class="star">★</span></div>
+        </div>
+        <h2 class="h-1 mt-6" data-reveal data-delay="2">
+          Built for de <br /><span class="editorial text-scotch" style="font-family: var(--font-script);">whole table.</span>
+        </h2>
+        <p class="lead mt-6" data-reveal data-delay="3">
+          Doubles. Jerk chicken. Roti. Rice and peas. Plantains. Whatever's on de plate, Trinbago belongs beside it. We didn't build a sauce for one dish — we built one for de whole island spread.
+        </p>
+        <div class="food-pairings mt-6" data-reveal data-delay="4">
+          <span class="food-pairing">🍗 Jerk chicken</span>
+          <span class="food-pairing">🥟 Doubles</span>
+          <span class="food-pairing">🌯 Roti wraps</span>
+          <span class="food-pairing">🍚 Rice + peas</span>
+          <span class="food-pairing">🥚 Eggs (yes, eggs)</span>
+          <span class="food-pairing">🍅 Bloody mary</span>
+        </div>
+        <div class="mt-8" data-reveal data-delay="5">
+          <a href="experience.html" class="btn btn-pepper btn-arrow btn-drip">See De Pairings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Caution tape -->
+<div class="caution-tape" aria-hidden="true"></div>
+
 <!-- TESTIMONIALS — polaroid-style -->
 <section class="section">
   <div class="wrap">
@@ -380,17 +408,34 @@
   </div>
 </section>
 
+<!-- Memorial dedication strip -->
+<section class="memorial-strip" aria-label="Family dedication">
+  <div class="wrap memorial-strip-inner">
+    <div class="memorial-line">
+      <span class="memorial-mark">❤</span>
+      <span>
+        Trinbago Pepper Sauce<sup>®</sup> is dedicated to the <strong>Marin Family</strong>.
+        <br class="memorial-br" />
+        In Loving Memory of <em>Felix Sanchez Marin</em> (1938–2021) &amp; <em>Shafina Marin</em> (1938–2016).
+      </span>
+      <span class="memorial-mark">❤</span>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-brand">Trinbago<span class="text-pepper">.</span></div>
     <div class="footer-grid mt-8">
       <div class="footer-col">
-        <h4>From</h4>
-        <p class="text-soft" style="line-height:1.6;">
-          Port of Spain → Brooklyn<br />
-          Trinidad &amp; Tobago<br />
-          <span class="mono text-dim mt-3" style="display:inline-block;">Bottled with love since 2018</span>
+        <h4>Visit / Ship From</h4>
+        <p class="text-soft" style="line-height:1.7;">
+          1126 Oneida St<br />
+          Fort Wayne, IN 46805<br />
+          <a href="tel:+12604416757" class="footer-link">(260) 441-6757</a><br />
+          <a href="mailto:trinbagopeppersauce@gmail.com" class="footer-link">trinbagopeppersauce@gmail.com</a>
+          <span class="mono text-dim" style="display:block; margin-top: var(--s-3);">Bottled with love since 2018</span>
         </p>
       </div>
       <div class="footer-col">
@@ -413,18 +458,59 @@
       <div class="footer-col">
         <h4>Follow</h4>
         <ul>
-          <li><a href="https://instagram.com/trinbagopeppersauce" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="mailto:hello@trinbagopeppersauce.com">hello@trinbagopeppersauce.com</a></li>
+          <li><a href="https://www.instagram.com/trinbagopeppersauce/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TrinbagoPepperSauce" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="mailto:trinbagopeppersauce@gmail.com">Email Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Trinbago Pepper Sauce™ &nbsp;·&nbsp; Estd 2018</span>
+      <span>© <span data-year>2026</span> Trinbago Pepper Sauce<sup>®</sup> &nbsp;·&nbsp; Estd 2018 · Fort Wayne, IN</span>
       <span>Site by <a href="https://sweetdreamsmusic.com" target="_blank" rel="noopener">Sweet Dreams Studios</a></span>
     </div>
   </div>
 </footer>
+
+<style>
+  /* Memorial strip styles */
+  .memorial-strip {
+    background: var(--bg);
+    border-top: 2px solid var(--pepper);
+    border-bottom: 2px solid var(--pepper);
+    padding: var(--s-6) 0;
+    text-align: center;
+  }
+  .memorial-strip-inner { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+  .memorial-line {
+    font-family: var(--font-script);
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    line-height: 1.5;
+    color: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-4);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .memorial-line strong { color: var(--pepper); font-family: var(--font-display); letter-spacing: 0.04em; }
+  .memorial-line em { color: var(--scotch); font-style: normal; }
+  .memorial-mark {
+    color: var(--pepper);
+    font-size: 1.4em;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  .memorial-br { display: none; }
+  @media (max-width: 700px) {
+    .memorial-br { display: inline; }
+  }
+
+  .footer-link {
+    color: var(--text-soft);
+    border-bottom: 1px dashed var(--border-strong);
+    transition: color var(--dur-fast), border-color var(--dur-fast);
+  }
+  .footer-link:hover { color: var(--pepper); border-bottom-color: var(--pepper); }
+</style>
 
 <!-- Floating brand badge -->
 <a href="pricing.html" class="floating-brand" aria-label="Buy a bottle">
@@ -441,143 +527,95 @@
     border-radius: 50%;
   }
 
-  /* ---------- HERO COLLAGE ---------- */
-  .hero-collage {
+  /* ---------- HERO PHOTO — full-bleed bottle, text right ---------- */
+  .hero-photo {
     min-height: 100svh;
-    background:
-      radial-gradient(ellipse at 30% 20%, var(--pepper-glow) 0%, transparent 50%),
-      radial-gradient(ellipse at 70% 80%, var(--scotch-glow) 0%, transparent 60%),
-      var(--bg);
-    overflow: hidden;
-    padding-top: 8rem;
-    padding-bottom: 4rem;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
   }
-  .collage-grain {
+  .hero-photo-bg {
     position: absolute;
     inset: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
-    opacity: 0.15;
-    pointer-events: none;
-    mix-blend-mode: overlay;
+    z-index: 0;
+    will-change: transform, opacity;
   }
-  .collage-wrap {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: var(--gutter);
-    align-items: center;
-    min-height: calc(100svh - 12rem);
+  .hero-photo-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% center; /* bottle sits left-of-center in source */
+    filter: contrast(1.08) saturate(1.05);
+  }
+  .hero-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(10,7,7,0.45) 0%, rgba(10,7,7,0.20) 35%, rgba(10,7,7,0.65) 65%, rgba(10,7,7,0.92) 100%),
+      radial-gradient(ellipse at 80% 50%, var(--pepper-glow), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-photo-wrap {
     position: relative;
     z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter);
+    align-items: center;
+    min-height: calc(100svh - 8rem);
   }
-  @media (max-width: 900px) { .collage-wrap { grid-template-columns: 1fr; } }
-
-  .collage-text { position: relative; }
-  .collage-text h1 {
-    font-size: clamp(4rem, 14vw, 12rem);
+  .hero-photo-text {
+    grid-column: 2;
+    max-width: 580px;
+    justify-self: end;
+  }
+  .hero-photo-text .hero-title {
+    font-size: clamp(3.5rem, 10vw, 9rem);
     line-height: 0.92;
     margin-top: var(--s-6);
   }
-  .collage-text h1 .line {
+  .hero-photo-text .hero-title .line {
     display: block;
     transform-origin: left;
   }
-  .collage-text h1 .line-1 { transform: rotate(-1deg); }
-  .collage-text h1 .line-2 { transform: rotate(0.5deg) translateX(40px); font-family: var(--font-script); color: var(--scotch); font-size: 0.55em; line-height: 0.6; }
-  .collage-text h1 .line-3 { transform: rotate(-0.5deg); }
-  .collage-text h1 .line-4.script-shout {
+  .hero-photo-text .hero-title .line-1 { transform: rotate(-1deg); }
+  .hero-photo-text .hero-title .line-2 {
+    transform: rotate(0.5deg) translateX(40px);
+    font-family: var(--font-script);
+    color: var(--scotch);
+    font-size: 0.55em;
+    line-height: 0.6;
+  }
+  .hero-photo-text .hero-title .line-3 { transform: rotate(-0.5deg); }
+  .hero-photo-text .hero-title .line-4.script-shout {
     font-family: var(--font-script);
     color: var(--bone);
-    font-size: 1.2em;
+    font-size: 1.25em;
     text-shadow:
       4px 4px 0 var(--pepper-deep),
-      6px 6px 0 var(--bg);
+      8px 8px 0 var(--bg);
     transform: rotate(-2deg) translateX(20px);
     text-transform: none;
     letter-spacing: 0.02em;
   }
+  .hero-photo-text .hero-lead {
+    margin-top: var(--s-6);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  .hero-photo-text .hero-ctas { margin-top: var(--s-7); }
 
-  /* ---------- BOTTLE COLLAGE ---------- */
-  .collage-bottle {
-    position: relative;
-    height: 80vh;
-    max-height: 760px;
-    display: grid;
-    place-items: center;
-  }
-  .collage-bottle .bottle-mount {
-    width: 100%;
-    height: 100%;
-  }
-  .collage-bottle .bottle-mount img {
-    max-height: 100%;
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-  }
-  .collage-logo {
-    position: absolute;
-    top: 6%;
-    right: -4%;
-    width: 28%;
-    max-width: 200px;
-    z-index: 3;
-    transform: rotate(8deg);
-    animation: floatLogo 6s ease-in-out infinite;
-    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.7));
-  }
-  @keyframes floatLogo {
-    0%, 100% { transform: rotate(8deg) translateY(0); }
-    50% { transform: rotate(12deg) translateY(-10px); }
-  }
-
-  .collage-sticker {
-    position: absolute;
-    background: var(--scotch);
-    color: var(--bg);
-    font-family: var(--font-display);
-    text-align: center;
-    padding: 0.85rem 1.1rem;
-    border-radius: 50%;
-    border: 3px solid var(--bg);
-    font-size: 0.85rem;
-    line-height: 1.05;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    z-index: 4;
-  }
-  .collage-sticker-1 {
-    top: 18%;
-    left: -5%;
-    background: var(--pepper);
-    color: var(--bone);
-    transform: rotate(-12deg);
-    animation: wobbleSlow 5s ease-in-out infinite;
-  }
-  .collage-sticker-2 {
-    bottom: 30%;
-    right: -2%;
-    transform: rotate(15deg);
-    animation: wobbleSlow 5s ease-in-out infinite reverse;
-    animation-delay: 1s;
-  }
-  .collage-sticker-3 {
-    bottom: 8%;
-    left: 8%;
-    background: var(--bg);
-    color: var(--bone);
-    border-color: var(--scotch);
-    transform: rotate(-8deg);
-    animation: wobbleSlow 5s ease-in-out infinite;
-    animation-delay: 2s;
-  }
-  @keyframes wobbleSlow {
-    0%, 100% { transform: rotate(var(--r, -12deg)) translateY(0); }
-    50% { transform: rotate(calc(var(--r, -12deg) + 4deg)) translateY(-6px); }
-  }
   @media (max-width: 900px) {
-    .collage-bottle { height: 60vh; max-height: 500px; }
-    .collage-logo { width: 36%; right: -8%; }
-    .collage-sticker { font-size: 0.7rem; padding: 0.6rem 0.8rem; }
+    .hero-photo { padding-top: 5rem; }
+    .hero-photo-bg img { object-position: center center; }
+    .hero-photo-overlay {
+      background: linear-gradient(180deg, rgba(10,7,7,0.50) 0%, rgba(10,7,7,0.65) 50%, rgba(10,7,7,0.95) 100%);
+    }
+    .hero-photo-wrap { grid-template-columns: 1fr; }
+    .hero-photo-text { grid-column: 1; justify-self: start; }
   }
 
   /* ---------- Ribbon row centering ---------- */
@@ -585,6 +623,72 @@
     display: flex;
     justify-content: center;
     margin-bottom: var(--s-7);
+  }
+
+  /* ---------- Food spread frame ---------- */
+  .food-frame {
+    position: relative;
+    border: 6px solid var(--bone);
+    box-shadow:
+      0 0 0 4px var(--pepper),
+      16px 16px 0 var(--pepper-deep);
+    transform: rotate(-1.5deg);
+    transition: transform var(--dur);
+    overflow: hidden;
+  }
+  .food-frame:hover { transform: rotate(0deg) scale(1.02); }
+  .food-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: contrast(1.05) saturate(1.05);
+    transition: transform 1.2s var(--ease-out);
+  }
+  .food-frame:hover img { transform: scale(1.05); }
+  .food-tape {
+    position: absolute;
+    background: var(--scotch);
+    color: var(--bg);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border: 2px dashed rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    letter-spacing: 0.04em;
+  }
+  .food-tape-1 {
+    top: -12px;
+    left: 8%;
+    transform: rotate(-4deg);
+  }
+  .food-tape-2 {
+    bottom: -10px;
+    right: 6%;
+    transform: rotate(3deg);
+    background: var(--pepper);
+    color: var(--bone);
+  }
+
+  .food-pairings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+  }
+  .food-pairing {
+    padding: 0.55rem 0.95rem;
+    border: 2px solid var(--border-strong);
+    background: var(--bg-1);
+    color: var(--text-soft);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    transition: all var(--dur-fast);
+  }
+  .food-pairing:hover {
+    border-color: var(--pepper);
+    color: var(--pepper);
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0 var(--pepper-deep);
   }
 
   /* ---------- Sticker grid (replaces pillars) ---------- */

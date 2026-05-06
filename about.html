@@ -218,15 +218,170 @@
   </div>
 </section>
 
+<!-- Memorial — Felix & Shafina Marin -->
+<section class="section memorial-section" id="memorial">
+  <div class="wrap">
+    <div class="grid-12" style="align-items: center;">
+      <div style="grid-column: 1 / span 6;" data-reveal>
+        <div class="memorial-frame">
+          <div class="memorial-corner memorial-corner-tl"></div>
+          <div class="memorial-corner memorial-corner-tr"></div>
+          <div class="memorial-corner memorial-corner-bl"></div>
+          <div class="memorial-corner memorial-corner-br"></div>
+          <img src="assets/img/trinbagofamily.webp" alt="The Marin family — Felix and Shafina, the heart of Trinbago Pepper Sauce" />
+          <div class="memorial-tag">~ The Marin Family ~</div>
+        </div>
+      </div>
+      <div style="grid-column: 8 / -1;">
+        <div data-reveal>
+          <div class="memorial-eyebrow">❤ In Loving Memory ❤</div>
+          <h2 class="h-1 mt-4" style="line-height: 0.95;">
+            Dedicated to <br />
+            <span class="text-pepper" style="font-family: var(--font-script); font-size: 0.85em; line-height: 1; text-shadow: 4px 4px 0 var(--bg);">the Marin Family.</span>
+          </h2>
+        </div>
+        <div class="memorial-card mt-8" data-reveal data-delay="2">
+          <div class="memorial-name">
+            <span class="display">Felix Sanchez Marin</span>
+            <span class="memorial-dates mono">23.12.1938 — 21.03.2021</span>
+          </div>
+          <div class="memorial-amp">&amp;</div>
+          <div class="memorial-name">
+            <span class="display">Shafina Marin</span>
+            <span class="memorial-dates mono">31.01.1938 — 11.10.2016</span>
+          </div>
+        </div>
+        <p class="lead mt-8" data-reveal data-delay="3">
+          Every bottle of Trinbago carries Felix and Shafina with it. Their recipe. Their kitchen. Their fire. Three generations of Marins later, this is still <span class="editorial text-scotch" style="font-size:1.4em;">their</span> sauce — we just keep bottling it.
+        </p>
+        <p class="mt-6 text-soft" data-reveal data-delay="4">
+          Born in Trinidad. Brought de recipe to Indiana. Built a family that built a brand. Trinbago is their legacy — pepper, love, and a whole lot of fire.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Final marquee -->
 <section class="marquee" aria-hidden="true">
   <div class="marquee-track">
+    <span class="marquee-item">For Felix &amp; Shafina</span>
     <span class="marquee-item">Built in Trinidad</span>
-    <span class="marquee-item">Bottled in Brooklyn</span>
+    <span class="marquee-item">Bottled in Fort Wayne</span>
     <span class="marquee-item">Burned worldwide</span>
-    <span class="marquee-item">Made with love</span>
+    <span class="marquee-item">For Felix &amp; Shafina</span>
     <span class="marquee-item">Built in Trinidad</span>
-    <span class="marquee-item">Bottled in Brooklyn</span>
+  </div>
+</section>
+
+<style>
+  .memorial-section {
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(229,29,31,0.08), transparent 60%),
+      var(--bg);
+    border-block: 2px solid var(--pepper);
+  }
+  .memorial-frame {
+    position: relative;
+    background: var(--bone);
+    padding: 22px;
+    border: 4px solid var(--pepper);
+    box-shadow:
+      0 0 0 4px var(--bone),
+      0 0 0 8px var(--pepper-deep),
+      18px 18px 0 var(--bg);
+    transform: rotate(-1.5deg);
+    transition: transform var(--dur);
+  }
+  .memorial-frame:hover { transform: rotate(0deg) scale(1.02); }
+  .memorial-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: contrast(1.04);
+  }
+  .memorial-tag {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    background: var(--pepper);
+    color: var(--bone);
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    border: 3px solid var(--bone);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    white-space: nowrap;
+  }
+  /* Gold corner ornaments */
+  .memorial-corner {
+    position: absolute;
+    width: 36px; height: 36px;
+    border: 3px solid var(--gold);
+    z-index: 2;
+  }
+  .memorial-corner-tl { top: -10px; left: -10px; border-right: 0; border-bottom: 0; }
+  .memorial-corner-tr { top: -10px; right: -10px; border-left: 0; border-bottom: 0; }
+  .memorial-corner-bl { bottom: -10px; left: -10px; border-right: 0; border-top: 0; }
+  .memorial-corner-br { bottom: -10px; right: -10px; border-left: 0; border-top: 0; }
+
+  .memorial-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--pepper);
+    font-weight: 700;
+  }
+
+  .memorial-card {
+    background: var(--bg-1);
+    border: 2px solid var(--pepper);
+    padding: var(--s-7);
+    box-shadow: 8px 8px 0 var(--pepper-deep);
+    text-align: center;
+  }
+  .memorial-name {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+  .memorial-name .display {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    line-height: 1;
+    color: var(--bone);
+    letter-spacing: 0.02em;
+  }
+  .memorial-dates {
+    color: var(--scotch);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+  }
+  .memorial-amp {
+    font-family: var(--font-script);
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--pepper);
+    margin: var(--s-4) 0;
+  }
+
+  @media (max-width: 900px) {
+    .grid-12 > div { grid-column: 1 / -1 !important; }
+    .memorial-tag { font-size: 1.1rem; }
+  }
+</style>
+
+<!-- Memorial dedication strip -->
+<section class="memorial-strip" aria-label="Family dedication">
+  <div class="wrap memorial-strip-inner">
+    <div class="memorial-line">
+      <span class="memorial-mark">❤</span>
+      <span>Trinbago Pepper Sauce<sup>®</sup> is dedicated to the <strong>Marin Family</strong>.<br class="memorial-br" />
+      In Loving Memory of <em>Felix Sanchez Marin</em> (1938–2021) &amp; <em>Shafina Marin</em> (1938–2016).</span>
+      <span class="memorial-mark">❤</span>
+    </div>
   </div>
 </section>
 
@@ -235,14 +390,27 @@
   <div class="wrap">
     <div class="footer-brand">Trinbago<span class="text-pepper">.</span></div>
     <div class="footer-grid mt-8">
-      <div class="footer-col"><h4>From</h4><p class="text-soft" style="line-height:1.6;">Port of Spain → Brooklyn<br />Trinidad &amp; Tobago<br /><span class="mono text-dim mt-3" style="display:inline-block;">Bottled with love since 2018</span></p></div>
+      <div class="footer-col"><h4>Visit / Ship From</h4><p class="text-soft" style="line-height:1.7;">1126 Oneida St<br />Fort Wayne, IN 46805<br /><a href="tel:+12604416757" class="footer-link">(260) 441-6757</a><br /><a href="mailto:trinbagopeppersauce@gmail.com" class="footer-link">trinbagopeppersauce@gmail.com</a><span class="mono text-dim" style="display:block; margin-top: var(--s-3);">Bottled with love since 2018</span></p></div>
       <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">De Story</a></li><li><a href="experience.html">Heat Scale</a></li><li><a href="pricing.html">Bottles</a></li><li><a href="giveaway.html">Giveaway</a></li></ul></div>
       <div class="footer-col"><h4>Crew</h4><ul><li><a href="join.html">Join De Crew</a></li><li><a href="admin.html">Operator</a></li></ul></div>
-      <div class="footer-col"><h4>Follow</h4><ul><li><a href="https://instagram.com/trinbagopeppersauce" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:hello@trinbagopeppersauce.com">hello@trinbagopeppersauce.com</a></li></ul></div>
+      <div class="footer-col"><h4>Follow</h4><ul><li><a href="https://www.instagram.com/trinbagopeppersauce/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/TrinbagoPepperSauce" target="_blank" rel="noopener">Facebook</a></li><li><a href="mailto:trinbagopeppersauce@gmail.com">Email Us</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© <span data-year>2026</span> Trinbago Pepper Sauce™ &nbsp;·&nbsp; Estd 2018</span><span>Site by <a href="https://sweetdreamsmusic.com" target="_blank" rel="noopener">Sweet Dreams Studios</a></span></div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> Trinbago Pepper Sauce<sup>®</sup> &nbsp;·&nbsp; Estd 2018 · Fort Wayne, IN</span><span>Site by <a href="https://sweetdreamsmusic.com" target="_blank" rel="noopener">Sweet Dreams Studios</a></span></div>
   </div>
 </footer>
+
+<style>
+  .memorial-strip { background: var(--bg); border-block: 2px solid var(--pepper); padding: var(--s-6) 0; text-align: center; }
+  .memorial-strip-inner { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+  .memorial-line { font-family: var(--font-script); font-size: clamp(1rem, 1.8vw, 1.35rem); line-height: 1.5; color: var(--cream); display: inline-flex; align-items: center; gap: var(--s-4); flex-wrap: wrap; justify-content: center; }
+  .memorial-line strong { color: var(--pepper); font-family: var(--font-display); letter-spacing: 0.04em; }
+  .memorial-line em { color: var(--scotch); font-style: normal; }
+  .memorial-mark { color: var(--pepper); font-size: 1.4em; animation: pulse 2.5s ease-in-out infinite; }
+  .memorial-br { display: none; }
+  @media (max-width: 700px) { .memorial-br { display: inline; } }
+  .footer-link { color: var(--text-soft); border-bottom: 1px dashed var(--border-strong); transition: color var(--dur-fast), border-color var(--dur-fast); }
+  .footer-link:hover { color: var(--pepper); border-bottom-color: var(--pepper); }
+</style>
 
 <style>
   .chapter { gap: var(--gutter); }
